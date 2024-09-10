@@ -20,9 +20,9 @@ function Home() {
             {/* Navigation Bar */}
             <motion.nav
                 className="bg-rose-100 rounded-md border-2 border-rose-100"
-                initial={{ x: '-5vw', opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                transition={{ duration: 1, delay: loading ? 4 : 0, type: 'spring', stiffness: 50 }}
+                initial={{ y: '-5vw', opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ duration: 1, delay: loading ? 1 : 0, type: 'spring', stiffness: 50 }}
             >
                 <div className="flex flex-wrap items-center justify-between mx-auto p-4">
                     <h1 className="flex items-center space-x-3">Nafisa Anzum</h1>
@@ -44,7 +44,7 @@ function Home() {
                                 className="flex-1 p-4 rounded-md border-2 border-rose-100 bg-rose-100"
                                 initial={{ x: '-5vw', opacity: 0 }}
                                 animate={{ x: 0, opacity: 1 }}
-                                transition={{ duration: 1, delay: loading ? 4 : 0 }}
+                                transition={{ duration: 1, delay: loading ? 1.5 : 0 }}
                             >
                                 Quote
                             </motion.div>
@@ -64,7 +64,7 @@ function Home() {
                                 className="flex-1 p-4 rounded-md border-2 border-rose-100 bg-rose-100"
                                 initial={{ x: '-5vw', opacity: 0 }}
                                 animate={{ x: 0, opacity: 1 }}
-                                transition={{ duration: 1, delay: loading ? 5 : 0 }}
+                                transition={{ duration: 1, delay: loading ? 2 : 0 }}
                             >
                                 Down 1
                             </motion.div>
@@ -73,7 +73,7 @@ function Home() {
                                 className="flex-1 p-4 rounded-md border-2 border-rose-300 bg-rose-300"
                                 initial={{ y: '5vw', opacity: 0 }}
                                 animate={{ y: 0, opacity: 1 }}
-                                transition={{ duration: 1, delay: loading ? 5.5 : 0 }}
+                                transition={{ duration: 1, delay: loading ? 2.5 : 0 }}
                             >
                                 Contact Me
                             </motion.div>
@@ -85,7 +85,7 @@ function Home() {
                         className="basis-1/3 p-4 rounded-md border-2 border-rose-100 bg-rose-100"
                         initial={{ x: '5vw', opacity: 0 }}
                         animate={{ x: 0, opacity: 1 }}
-                        transition={{ duration: 1, delay: loading ? 6 : 0 }}
+                        transition={{ duration: 1, delay: loading ? 3 : 0 }}
                     >
                         Quick Links for Projects
                     </motion.div>
