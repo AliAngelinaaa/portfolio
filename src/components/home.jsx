@@ -16,7 +16,7 @@ function Home() {
     }, []);
 
     return (
-        <motion.div>
+        <motion.div >
             {/* Navigation Bar */}
             <motion.nav
                 className="bg-rose-100 rounded-md border-2 border-rose-100"
@@ -35,7 +35,7 @@ function Home() {
             </motion.nav>
 
             {/* Main Content */}
-            <div className="container mx-auto mt-2 max-w-4xl">
+            <div className="w-full mx-auto mt-2">
                 <div className="flex flex-row gap-4 justify-center">
                     {/* Left Column */}
                     <div className="basis-2/3 space-y-2">
@@ -55,7 +55,7 @@ function Home() {
                                 animate={{ opacity: 1, scale: 1 }}
                                 transition={{ type: "spring", duration: 1, delay: loading ? 0.5 : 0 }}
                             >
-                                <img src={image} />
+                                <img src={image} class="object-cover h-80 w-full rounded-md"/>
                             </motion.div>
                         </div>
 
