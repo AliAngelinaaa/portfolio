@@ -1,32 +1,4 @@
-@keyframes shrinkMove {
-    0% {
-      transform: scale(1) translate(0, 0);
-    }
-    50% {
-      transform: scale(0.5) translate(-50%, -50%);
-    }
-    100% {
-      transform: scale(1) translate(-100%, 0);
-    }
-  }
-  
-  @keyframes appearGrow {
-    0% {
-      opacity: 0;
-      transform: scale(0.5);
-    }
-    100% {
-      opacity: 1;
-      transform: scale(1);
-    }
-  }
-  
-  .picture-placeholder {
-    animation: shrinkMove 1s forwards;
-  }
-  
-  .other-content {
-    animation: appearGrow 1s forwards;
-    animation-delay: 1s; /* Delay to start after the picture animation */
-  }
-  
+.imageNafisa {
+    height: 40vw;
+    width: 100%;
+}
