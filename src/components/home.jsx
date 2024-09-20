@@ -22,7 +22,7 @@ function Home() {
             <div className="w-full mx-auto mt-2">
                 <div className="flex flex-row gap-4 justify-center">
                     {/* Left Column */}
-                    <div className="basis-2/3 space-y-2">
+                    <div className="flex flex-col space-y-2">
                         <div className="flex gap-2">
                             {/* Left Column - Quote */}
                             <motion.div
