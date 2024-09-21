@@ -1,11 +1,11 @@
 .imageNafisa {
-    height: 40vw;
+    height: 300px;
     width: 100%;
 }
 
 @media (min-width: 1440px) {
     .imageNafisa {
         height: 700px;
-        width: 1000px;
+        width: 100%;
     }
 }

@@ -19,7 +19,7 @@ function Home() {
     return (
         <motion.div >
             {/* Main Content */}
-            <div className="w-full mx-auto mt-2">
+            <div className="mx-auto mt-2">
                 <div className="flex flex-row gap-4 justify-center">
                     {/* Left Column */}
                     <div className="flex flex-col space-y-2">
@@ -36,27 +36,27 @@ function Home() {
 
                             {/* Right Column - Image */}
                             <motion.div
-                                className="flex-1 rounded-md"
+                                className=" rounded-md"
                                 initial={{ opacity: 1, scale: 2 }}
                                 animate={{ opacity: 1, scale: 1 }}
                                 transition={{ type: "spring", duration: 1, delay: loading ? 0.5 : 0 }}
                             >
-                                <img src={image} className="object-cover rounded-md imageNafisa" />
+                                <img src={image} className="aspect-[3/4] object-cover rounded-md imageNafisa" />
                             </motion.div>
                         </div>
 
                         <div className="flex gap-2">
                             <motion.div
-                                className="flex-grow p-4 rounded-md border-2 border-rose-100 bg-rose-100"
+                                className="aspect-square flex-1 p-4 rounded-md border-2 border-rose-100 bg-rose-100"
                                 initial={{ x: '-5vw', opacity: 0 }}
                                 animate={{ x: 0, opacity: 1 }}
                                 transition={{ duration: 1, delay: loading ? 2 : 0 }}
                             >
-                                Down 1
+                               <p>Nafisa is a software developer with a passion for creating innovative solutions to complex problems. She is a quick learner and a team player, always eager to take on new challenges.</p>
                             </motion.div>
 
                             <motion.div
-                                className="aspect-square p-4 rounded-md border-2 border-rose-300 bg-rose-300 flex flex-col"
+                                className="aspect-square flex-1 p-4 rounded-md border-2 border-rose-300 bg-rose-300 flex flex-col"
                                 initial={{ y: '5vw', opacity: 0 }}
                                 animate={{ y: 0, opacity: 1 }}
                                 transition={{ duration: 1, delay: loading ? 2.5 : 0 }}
@@ -77,12 +77,26 @@ function Home() {
 
                     {/* Right Column */}
                     <motion.div
-                        className="basis-1/3 p-4 rounded-md border-2 border-rose-100 bg-rose-100"
+                        className="basis-1/3 flex flex-col h-full"
                         initial={{ x: '5vw', opacity: 0 }}
                         animate={{ x: 0, opacity: 1 }}
                         transition={{ duration: 1, delay: loading ? 3 : 0 }}
                     >
-                        Quick Links for Projects
+                        <div className="flex-grow p-4 rounded-md border-2 border-rose-100 bg-rose-100 mb-2">
+                            <div className="flex justify-between items-center mb-2">
+                                <span>RosyPost</span>
+                                <a href="#" className="w-4 h-4 text-rose-600 hover:text-rose-800 transition-colors">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fillRule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clipRule="evenodd" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div className="aspecp-2 rounded-md border-2 border-rose-100 bg-rose-100 flex justify-center space-x-4">
+                            <a href="#" className="text-rose-600 hover:text-rose-800">
+                                Linkedin
+                            </a>
+                        </div>
                     </motion.div>
                 </div>
             </div>
