@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 import timelineData from './timelineData.js';
+import '../images/bugsplat1.png';
+
 
 function Timeline() {
     const [hoveredIndex, setHoveredIndex] = useState(null);
@@ -38,8 +40,7 @@ function Timeline() {
                             <div>
                                 <p className="ml-2 text-rose-600 uppercase tracking-loose">{timelineData[currentIndex].date}</p>
                                 <h2 className="text-3xl md:text-4xl leading-normal md:leading-relaxed mb-2">{timelineData[currentIndex].title}</h2>
-                                <p className="text-sm md:text-base text-black mb-4">
-                                {timelineData[currentIndex].description}
+                                <p className="text-sm md:text-base text-black mb-4 text-left"  dangerouslySetInnerHTML={{ __html: timelineData[currentIndex].description }}>
                                 </p>
                             </div>
                         </div>

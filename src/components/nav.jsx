@@ -18,11 +18,14 @@ function Nav() {
         transition={{ duration: 1, delay: loading ? 1 : 0, type: 'spring', stiffness: 50 }}
     >
         <div className="flex flex-wrap items-center justify-between mx-auto p-4">
-            <h1 className="flex items-center space-x-3">Nafisa Anzum</h1>
+            <div className="flex items-center">
+                <h1 className="text-2xl italic mr-1">Nafisa</h1>
+                <h1 className="text-2xl">Anzum</h1>
+            </div>
             <ul className="flex flex-row space-x-8 font-medium">
-                <li>Projects</li>
-                <li>About</li>
-                <li>Contact</li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
     </motion.nav>
@@ -30,4 +33,3 @@ function Nav() {
   }
   
   export default Nav;
-  
