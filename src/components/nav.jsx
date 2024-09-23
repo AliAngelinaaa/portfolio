@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-
+import { Link } from 'react-router-dom';
+import { scroller } from 'react-scroll'; // {{ edit_1 }}
 
 function Nav() {  
     const [loading, setLoading] = useState(true);
@@ -10,6 +11,16 @@ function Nav() {
         }, 2000); // 1-second delay
         return () => clearTimeout(timer);
     }, []);
+    
+    const scrollToSection = (section) => { // {{ edit_2 }}
+        scroller.scrollTo(section, {
+            duration: 800,
+            delay: 0,
+            smooth: 'easeInOutQuart',
+            offset: -70, // Adjust this value based on your navbar height
+        });
+    };
+
     return (
         <motion.nav
         className="bg-rose-100 rounded-md border-2 border-rose-100"
@@ -23,13 +34,13 @@ function Nav() {
                 <h1 className="text-2xl">Anzum</h1>
             </div>
             <ul className="flex flex-row space-x-8 font-medium">
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><Link to="/" onClick={() => scrollToSection('home')}>Home</Link></li>
+                <li><Link to="/" onClick={() => scrollToSection('timeline')}>Projects</Link></li>
+                <li><Link to="/" onClick={() => scrollToSection('skills')}>Skils</Link></li>
             </ul>
         </div>
     </motion.nav>
     );
-  }
-  
-  export default Nav;
+}
+
+export default Nav;

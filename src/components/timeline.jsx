@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import timelineData from './timelineData.js';
-import '../images/bugsplat1.png';
 
 
 function Timeline() {
@@ -30,7 +29,7 @@ function Timeline() {
     const currentIndex = hoveredIndex !== null ? hoveredIndex : lastHoveredIndex;
 
     return (
-        <section className="text-black py-8">
+        <section id="timeline" className="text-black py-8">
             <div className="container mx-auto flex flex-col items-start md:flex-row my-12 md:my-24">
                 {isLargeScreen ? (
                     // Large screen layout (existing code)
