@@ -1,10 +1,9 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: sofia-pro, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
-  color: grey;
+  color: #2b2b2b;
   background: linear-gradient(to bottom, white, rgb(255 241 242)); /* Light pink: #FFE4E1 */
   min-height: 100vh; /* Ensure the gradient covers the entire viewport height */
 

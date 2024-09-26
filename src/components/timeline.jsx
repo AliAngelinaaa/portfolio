@@ -39,8 +39,13 @@ function Timeline() {
                             <div>
                                 <p className="ml-2 text-rose-600 uppercase tracking-loose">{timelineData[currentIndex].date}</p>
                                 <h2 className="text-3xl md:text-4xl leading-normal md:leading-relaxed mb-2">{timelineData[currentIndex].title}</h2>
-                                <p className="text-sm md:text-base text-black mb-4 text-left"  dangerouslySetInnerHTML={{ __html: timelineData[currentIndex].description }}>
+                                <p className="text-sm md:text-base text-black mb-4 text-left" dangerouslySetInnerHTML={{ __html: timelineData[currentIndex].description }}>
                                 </p>
+                                {timelineData[currentIndex].link && (
+                                    <a href={timelineData[currentIndex].link} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">
+                                        Play the demo
+                                    </a>
+                                )}
                             </div>
                         </div>
 

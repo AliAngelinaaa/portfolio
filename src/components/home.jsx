@@ -52,7 +52,7 @@ function Home() {
                                 initial={{ x: '-5vw', opacity: 0 }}
                                 animate={{ x: 0, opacity: 1 }}
                                 transition={{ duration: 1, delay: loading ? 2 : 0 }}
-                            >
+                            > 
                                 <div className='flex-grow'></div>
                                 <p>Nafisa is a software developer with a passion for creating innovative solutions to complex problems. She is a quick learner and a team player, always eager to take on new challenges.</p>
                             </motion.div>
@@ -92,8 +92,9 @@ function Home() {
                                         <path fillRule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clipRule="evenodd" />
                                     </svg>
                                 </a>
-                                <img></img>
+                                
                             </div>
+                            <img></img>
                             <hr className="my-2 border-t-3 border-rose-400" />
                             <div className="py-3 text-left">PolyGlot Palace</div>
                             <hr className="my-2 border-t-3 border-rose-400" />
