@@ -23,7 +23,7 @@ function Nav() {
 
     return (
         <motion.nav
-        className="bg-rose-100 rounded-md border-2 border-rose-100"
+        className="bg-rose-100 rounded-md bg-gradient-to-br from-rose-100 to-rose-200 border-rose-100"
         initial={{ y: '-5vw', opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 1, delay: loading ? 1 : 0, type: 'spring', stiffness: 50 }}

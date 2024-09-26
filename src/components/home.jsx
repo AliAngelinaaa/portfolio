@@ -27,7 +27,7 @@ function Home() {
                         <div className="flex gap-3">
                             {/* Left Column - Quote */}
                             <motion.div
-                                className="flex-1 p-4 rounded-md border-2 border-rose-100 bg-rose-100"
+                                className="flex-1 p-4 rounded-md border-2 border-rose-100 bg-gradient-to-br from-rose-100 to-rose-200"
                                 initial={{ x: '-5vw', opacity: 0 }}
                                 animate={{ x: 0, opacity: 1 }}
                                 transition={{ duration: 1, delay: loading ? 1.5 : 0 }}
@@ -48,7 +48,7 @@ function Home() {
 
                         <div className="flex gap-3">
                             <motion.div
-                                className="aspect-[3/2] flex-1 p-4 rounded-md border-2 border-rose-100 bg-rose-100"
+                                className="aspect-[3/2] flex-1 p-4 rounded-md border-2 border-rose-100 bg-gradient-to-br from-rose-100 to-rose-200"
                                 initial={{ x: '-5vw', opacity: 0 }}
                                 animate={{ x: 0, opacity: 1 }}
                                 transition={{ duration: 1, delay: loading ? 2 : 0 }}
@@ -84,7 +84,7 @@ function Home() {
                         animate={{ x: 0, opacity: 1 }}
                         transition={{ duration: 1, delay: loading ? 3 : 0 }}
                     >
-                        <div className="flex-grow p-4 rounded-md border-2 border-rose-100 bg-rose-100 mb-2">
+                        <div className="flex-grow p-4 rounded-md border-2 border-rose-100 bg-gradient-to-br from-rose-100 to-rose-200 mb-2">
                             <div className="flex justify-between items-center mb-2">
                                 <span>RosyPost</span>
                                 <a href="#" className="w-6 h-6 text-rose-600 hover:text-rose-800 transition-all duration-500 ease-out transform hover:-translate-y-0.5 hover:translate-x-0.5">
@@ -102,7 +102,7 @@ function Home() {
                             <hr className="my-2 border-t-3 border-rose-400" />
                             <div className="py-3 text-left">Study Timer</div>
                         </div>
-                        <div className="p-2 rounded-md border-2 border-rose-100 bg-rose-100 flex justify-center space-x-4">
+                        <div className="p-2 rounded-md border-2 border-rose-100 bg-gradient-to-br from-rose-100 to-rose-200 flex justify-center space-x-4">
                             <a href="https://github.com/aliangelinaaa" target="_blank" rel="noopener noreferrer" className='font-sans hover:text-rose-800'> GITHUB</a>
                             <a href="https://www.linkedin.com/in/nafisaanzum" target="_blank" rel="noopener noreferrer" className=" hover:text-rose-800">LINKEDIN</a>
                         </div>
