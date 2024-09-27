@@ -1,5 +1,5 @@
 :root {
-  font-family: sofia-pro, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Nunito', Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -62,3 +62,7 @@ button:focus-visible {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  font-family: 'Nunito', sans-serif;
+}

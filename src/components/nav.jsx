@@ -30,8 +30,8 @@ function Nav() {
     >
         <div className="flex flex-wrap items-center justify-between mx-auto p-4">
             <div className="flex items-center">
-                <h1 className="text-2xl italic mr-1">Nafisa</h1>
-                <h1 className="text-2xl">Anzum</h1>
+                <h1 className="text-2xl mr-1 italic">Nafisa</h1>
+                <h1 className="text-2xl ">Anzum</h1>
             </div>
             <ul className="flex flex-row space-x-8 font-medium">
                 <li><Link to="/" onClick={() => scrollToSection('home')}>Home</Link></li>

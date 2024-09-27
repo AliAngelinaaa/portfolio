@@ -11,6 +11,7 @@ import polyglotpalacedb from '../images/polyglotpalacedb.png';
 import polyglotpalacewf from '../images/polyglotpalacewf.png';
 import polyglotpalacewf1 from '../images/polyglotpalacewf1.png';
 import todolist from "../images/todolist.png";
+import procrastination1 from "../images/procrastination1.png"
 
 const timelineData = [
     {
@@ -61,13 +62,29 @@ const timelineData = [
         "description": "Created during Break Through Tech's first ever Spring Guild. Introduction to bootstrap. Was working in a group of 2 within a time span of 8 hours to complete. "
     },
     {
+        "title": "Hamergency",
+        "date": "August 2022",
+        "description": "Worked on this porject as part of a hackathon where we created a website showcasing  "
+    },
+    {
         "title": "To-Do List",
         "date": "February 2023",
-        "description": `<p>This was the first project created during the Human-Computer Interaction course. As a solo endeavor, I focused on applying the principles of user-centered design to develop an intuitive and responsive to-do list application. This project allowed me to explore various aspects of UI/UX design, ensuring that users could easily navigate and interact with the application.</p>
-<p>Utilizing Bootstrap, I was able to rapidly prototype the layout and design of the application. Bootstrap's grid system and pre-defined components facilitated a clean and organized structure, allowing me to create a visually appealing interface without sacrificing functionality. I leveraged Bootstrap's responsive design features to ensure that the application performed seamlessly across various devices, from desktop to mobile, enhancing accessibility for all users.</p>
-<p>Throughout the development process, I prioritized usability by conducting user testing sessions to gather feedback on the application's functionality and design. This iterative approach helped refine the user experience, leading to a polished final product. The to-do list application not only demonstrated my coding abilities but also my commitment to creating user-friendly software.</p>
-<p>Overall, this project laid a strong foundation for my understanding of human-computer interaction principles and reinforced the importance of considering user needs in the development process.</p>
-<img src=${todolist} alt="Club Finder Screenshot 1" class="w-full max-w-2xl mx-auto rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer" onclick="openImageModal(this.src)" />`
+        "description": `
+<p class="mb-4 text-base text-gray-700 leading-relaxed">
+    This was the first project created during the Human-Computer Interaction course. As a solo endeavor, I focused on applying the principles of user-centered design to develop an intuitive and responsive to-do list application. This project allowed me to explore various aspects of UI/UX design, ensuring that users could easily navigate and interact with the application.
+</p>
+<p class="mb-4 text-base text-gray-700 leading-relaxed">
+    Utilizing Bootstrap, I was able to rapidly prototype the layout and design of the application. Bootstrap's grid system and pre-defined components facilitated a clean and organized structure, allowing me to create a visually appealing interface without sacrificing functionality. I leveraged Bootstrap's responsive design features to ensure that the application performed seamlessly across various devices, from desktop to mobile, enhancing accessibility for all users.
+</p>
+<p class="mb-4 text-base text-gray-700 leading-relaxed">
+    Throughout the development process, I prioritized usability by conducting user testing sessions to gather feedback on the application's functionality and design. This iterative approach helped refine the user experience, leading to a polished final product. The to-do list application not only demonstrated my coding abilities but also my commitment to creating user-friendly software.
+</p>
+<p class="mb-4 text-base text-gray-700 leading-relaxed">
+    Overall, this project laid a strong foundation for my understanding of human-computer interaction principles and reinforced the importance of considering user needs in the development process.
+</p>
+<img src=${todolist} alt="To-Do List Screenshot" class="w-full max-w-2xl mx-auto rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer" onclick="openImageModal(this.src)" />
+`
+
 
     },
     {
@@ -89,6 +106,11 @@ const timelineData = [
         "date": "Spring 2023",
         "description": "<p class='text-sm md:text-base leading-relaxed text-gray-700'>Developed as part of <span class='font-semibold'>CISC 3665: Game Design and Development</span> course, this game is designed to raise awareness about procrastination and offer strategies to overcome it. Dive into an interactive experience that not only entertains but educates users on managing time effectively.</p>",
         "link": "https://owenl0000.itch.io/procrastination"
+    },{
+        "title": "Balloon Pop",
+        "date": "Spring 2023",
+        "description": "<p class='text-sm md:text-base leading-relaxed text-gray-700'>This was the final project for <span class='font-semibold'>CISC 3665: Game Design and Development</span>, where we built this game all semester long. My one in particular is very buggy and not pleasant to play with. It has three levels int eh game with the second one being more and more buggy and the last one having an instant kill if tocuhed by another character.</p>",
+        "link": "https://aliangelinaaa.itch.io/nafisa-anzum-balloon-pop"
     },
     {
         "title": "Baby Bloom",

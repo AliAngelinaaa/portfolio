@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import image from '../images/image.jpeg';
 import "../style/home.css";
-import { FaEnvelope } from 'react-icons/fa'; // Import at the top of your file
+import { FaEnvelope, FaHeart } from 'react-icons/fa'; // Import at the top of your file
 import bugsplat1 from '../images/bugsplat1.png';
 import { Link } from 'react-router-dom';
 
@@ -19,7 +19,7 @@ function Home() {
     }, []);
 
     return (
-        <motion.div id="home">
+        <motion.div id="home" className="font-quicksand">
             {/* Main Content */}
             <div className="mx-auto mt-4">
                 <div className="flex flex-row gap-4 justify-center">
@@ -33,7 +33,17 @@ function Home() {
                                 animate={{ x: 0, opacity: 1 }}
                                 transition={{ duration: 1, delay: loading ? 1.5 : 0 }}
                             >
-                                Quote
+                                <div className="text-center mb-2">
+                                    <FaHeart className="w-[1.5vw] h-[1.5vw] text-rose-600 mx-auto" />
+                                </div>
+                                <p className="text-[2vw] italic mb-2 font-quicksand">
+                                    "A passionate developer eager to make a meaningful impact on the world, whether through
+                                    <span className="font-bold text-rose-600"> vlogging and video editing</span>,
+                                    expressing creativity as a <span className="font-bold">writer</span>, or
+                                    <span className="font-bold text-rose-600"> helping others with genuine passion</span>."
+                                </p>
+
+
                             </motion.div>
 
                             {/* Right Column - Image */}
@@ -53,7 +63,7 @@ function Home() {
                                 initial={{ x: '-5vw', opacity: 0 }}
                                 animate={{ x: 0, opacity: 1 }}
                                 transition={{ duration: 1, delay: loading ? 2 : 0 }}
-                            > 
+                            >
                                 <div className='flex-grow'></div>
                                 <p>Nafisa is a software developer with a passion for creating innovative solutions to complex problems. She is a quick learner and a team player, always eager to take on new challenges.</p>
                             </motion.div>
@@ -65,7 +75,7 @@ function Home() {
                                 transition={{ duration: 1, delay: loading ? 2.5 : 0 }}
                             >
                                 <div className="flex justify-between items-center mb-2">
-                                    <span className="text-xs">Have some questions?</span>
+                                    <span className="text-[1vw]">Have some questions?</span>
                                     <a href="#" className="w-6 h-6 text-rose-600 hover:text-rose-800 transition-all duration-500 ease-out transform hover:-translate-y-0.5 hover:translate-x-0.5">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                                             <path fillRule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clipRule="evenodd" />
@@ -73,7 +83,7 @@ function Home() {
                                     </a>
                                 </div>
                                 <div className="flex-grow"></div>
-                                <div className="text-6xl font-bold text-center">Contact Me</div>
+                                <div className="text-[4vw] font-bold text-center leading-none">Contact Me</div>
                             </motion.div>
                         </div>
                     </div>
@@ -86,15 +96,17 @@ function Home() {
                         transition={{ duration: 1, delay: loading ? 3 : 0 }}
                     >
                         <div className="flex-grow p-4 rounded-md border-2 border-rose-100 bg-gradient-to-br from-rose-100 to-rose-200 mb-2">
-                            <div className="flex justify-between items-center mb-2">
-                            <Link to="/experience">Experience</Link>
-                                <Link to="/experience" className="w-6 h-6 text-rose-600 hover:text-rose-800 transition-all duration-500 ease-out transform hover:-translate-y-0.5 hover:translate-x-0.5">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                        <path fillRule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clipRule="evenodd" />
-                                    </svg>
-                                </Link>
-                                
-                            </div>
+                            <Link to="/experience">
+                                <div className="flex justify-between items-center mb-2">
+                                    Experience
+                                    <div to="/experience" className="w-6 h-6 text-rose-600 hover:text-rose-800 transition-all duration-500 ease-out transform hover:-translate-y-0.5 hover:translate-x-0.5">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fillRule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+
+                                </div>
+                            </Link>
                             <img></img>
                             <hr className="my-2 border-t-3 border-rose-400" />
                             <div className="py-3 text-left">PolyGlot Palace</div>

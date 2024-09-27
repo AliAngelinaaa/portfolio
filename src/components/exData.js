@@ -1,3 +1,6 @@
+import th1 from '../images/th1.jpg';
+import bs2 from '../images/bs2.jpg';
+
 const exData = [
     {
         "Title": "I&O Service Recovery Analyst",
@@ -51,7 +54,7 @@ const exData = [
             "Partnered with 4 diverse interns to design and implement a unified onboarding workflow, resulting in a 20% increase in new hire satisfaction.",
             "Leveraged SharePoint, Forms, Confluence, and Excel to build a streamlined onboarding process."
         ],
-        "Image": "Teladoc Health logo"
+        "Image": `${th1}`
     },
     {
         "Title": "GSWEP Fellow",
@@ -92,7 +95,7 @@ const exData = [
           "Worked across several sub-teams with Blackstone's Technology and Innovations group to learn about and improve current work streams.",
           "Developed an API using React and Python, and managed the lifecycle of various tickets using JIRA."
         ],
-        "Image": "Blackstone logo"
+        "Image": `${bs2}`
       },
       {
         "Title": "Spring Guild Program Participant",
