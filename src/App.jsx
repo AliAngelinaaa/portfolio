@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { scroller } from 'react-scroll';
 import Nav from './components/nav';
@@ -7,6 +7,7 @@ import Timeline from './components/timeline';
 import Footer from './components/footer';
 import Skills from './components/skills';
 import Home from './components/home';
+import Experience from './components/experience';
 
 function App() {
   const [showScrollTop, setShowScrollTop] = useState(false);
@@ -32,18 +33,25 @@ function App() {
     <Router basename="/portfolio/">
       <div>
         <Nav />
-        <div id="home">
-          <Home />
-        </div>
-        <div id="projects">
-          <Timeline />
-        </div>
-        <div id="skills">
-          <Skills />
-        </div>
-        <div id="contact">
-          <Footer />
-        </div>
+        <Routes>
+          <Route path="/" element={
+            <>
+              <div id="home">
+                <Home />
+              </div>
+              <div id="projects">
+                <Timeline />
+              </div>
+              <div id="skills">
+                <Skills />
+              </div>
+              <div id="contact">
+                <Footer />
+              </div>
+            </>
+          } />
+          <Route path="/experience" element={<Experience />} />
+        </Routes>
         <AnimatePresence>
           {showScrollTop && (
             <motion.button

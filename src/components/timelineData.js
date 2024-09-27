@@ -6,7 +6,11 @@ import clubfinder1 from '../images/clubfinder1.png';
 import clubfinder2 from '../images/clubfinder2.png';
 import gitpulse1 from '../images/gitpulse1.png';
 import gitpulse2 from '../images/gitpulse2.png';
-
+import polyglotpalace from '../images/polyglotpalace.png';
+import polyglotpalacedb from '../images/polyglotpalacedb.png';
+import polyglotpalacewf from '../images/polyglotpalacewf.png';
+import polyglotpalacewf1 from '../images/polyglotpalacewf1.png';
+import todolist from "../images/todolist.png";
 
 const timelineData = [
     {
@@ -26,7 +30,7 @@ const timelineData = [
     },
     {
         "title": "Bug Splat",
-        "date": "November 2019",
+        "date": "February 2020",
         "description": `
             <p class="mb-4"><strong class="font-bold">Bug Splat</strong> is a simple yet engaging web-based game where players must eliminate alien bugs that have infested their home.</p>
             
@@ -54,12 +58,17 @@ const timelineData = [
     {
         "title": "Study Timer",
         "date": "April 2022",
-        "description": "Created during Break Through Tech's first ever Spring Guild. Introduction to bootstrap. Was working in a group of 2 within a time span of 8 hours to complete."
+        "description": "Created during Break Through Tech's first ever Spring Guild. Introduction to bootstrap. Was working in a group of 2 within a time span of 8 hours to complete. "
     },
     {
         "title": "To-Do List",
-        "date": "February 2022",
-        "description": "Created during Break Through Tech's first ever Spring Guild."
+        "date": "February 2023",
+        "description": `<p>This was the first project created during the Human-Computer Interaction course. As a solo endeavor, I focused on applying the principles of user-centered design to develop an intuitive and responsive to-do list application. This project allowed me to explore various aspects of UI/UX design, ensuring that users could easily navigate and interact with the application.</p>
+<p>Utilizing Bootstrap, I was able to rapidly prototype the layout and design of the application. Bootstrap's grid system and pre-defined components facilitated a clean and organized structure, allowing me to create a visually appealing interface without sacrificing functionality. I leveraged Bootstrap's responsive design features to ensure that the application performed seamlessly across various devices, from desktop to mobile, enhancing accessibility for all users.</p>
+<p>Throughout the development process, I prioritized usability by conducting user testing sessions to gather feedback on the application's functionality and design. This iterative approach helped refine the user experience, leading to a polished final product. The to-do list application not only demonstrated my coding abilities but also my commitment to creating user-friendly software.</p>
+<p>Overall, this project laid a strong foundation for my understanding of human-computer interaction principles and reinforced the importance of considering user needs in the development process.</p>
+<img src=${todolist} alt="Club Finder Screenshot 1" class="w-full max-w-2xl mx-auto rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer" onclick="openImageModal(this.src)" />`
+
     },
     {
         "title": "Club Finder",
@@ -79,7 +88,7 @@ const timelineData = [
         "title": "Procrasination the game",
         "date": "Spring 2023",
         "description": "<p class='text-sm md:text-base leading-relaxed text-gray-700'>Developed as part of <span class='font-semibold'>CISC 3665: Game Design and Development</span> course, this game is designed to raise awareness about procrastination and offer strategies to overcome it. Dive into an interactive experience that not only entertains but educates users on managing time effectively.</p>",
-        "link":"https://owenl0000.itch.io/procrastination"
+        "link": "https://owenl0000.itch.io/procrastination"
     },
     {
         "title": "Baby Bloom",
@@ -89,7 +98,18 @@ const timelineData = [
     {
         "title": "Polyglot Palace",
         "date": "July 2023",
-        "description": "This project was built in three weeks as part of TTP, where we were grouped into teams of four to showcase our skills learned in the first four weeks."
+        "description": `
+<p class="mb-4">
+  This project, <strong>Polyglot Palace</strong>, was developed over the span of three weeks as part of the TTP program, where teams of four were tasked with applying the skills acquired in the initial four-week training. Our goal was to build a full-stack web application that demonstrated a deep understanding of both front-end and back-end technologies, focusing on scalability, performance, and user experience.
+</p> <img src=${polyglotpalace} alt="Polyglot Palace Screenshot 1" class="w-full max-w-2xl mx-auto rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer" onclick="openImageModal(this.src)" />
+<p class="mb-4">
+  I played a central role in the overall design and development of the application. I was primarily responsible for the creation of the wireframes, which laid the groundwork for our application's structure and user flow.
+  In addition to the design, I handled most of the Redux integration, which was essential for managing the application's global state. Redux allowed us to streamline data flow across different components, making it easier to manage and update states consistently, especially when dealing with complex data sets.</p> <img src=${polyglotpalacewf} alt="Polyglot Palace Screenshot 2" class="w-full max-w-2xl mx-auto rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer" onclick="openImageModal(this.src)" /> <img src=${polyglotpalacewf1} alt="Polyglot Palace Screenshot 2" class="w-full max-w-2xl mx-auto rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer" onclick="openImageModal(this.src)" />
+  <p class="mb-4">
+  On the technical design side, I contributed to creating the UML (Unified Modeling Language) diagrams that mapped out the relationships between different components and services in our application.
+  </p>   <img src=${polyglotpalacedb} alt="Polyglot Palace Screenshot 2" class="w-full max-w-2xl mx-auto rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer" onclick="openImageModal(this.src)" />
+
+        `
     },
     {
         "title": "GitPulse",
@@ -110,7 +130,7 @@ const timelineData = [
     {
         "title": "Leet Sensei",
         "date": "October 2023",
-        "description": "<p>This was our submission for Hack Harvard 2023. Although we didn't win, I’m proud of the project’s success and the team's determination. I played a key role in encouraging the team to continue despite the challenges and limited knowledge of some technologies.</p>"
+        "description": "<p>This was our submission for Hack Harvard 2023. Although we didn't win, I’m proud of the project’s success and the team’s determination. I played a key role in encouraging the team to continue despite the challenges and limited knowledge of some technologies.</p>"
     },
     {
         "title": "Rosy Post",

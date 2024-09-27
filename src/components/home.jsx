@@ -4,6 +4,7 @@ import image from '../images/image.jpeg';
 import "../style/home.css";
 import { FaEnvelope } from 'react-icons/fa'; // Import at the top of your file
 import bugsplat1 from '../images/bugsplat1.png';
+import { Link } from 'react-router-dom';
 
 function Home() {
     // State to manage loading animation
@@ -86,12 +87,12 @@ function Home() {
                     >
                         <div className="flex-grow p-4 rounded-md border-2 border-rose-100 bg-gradient-to-br from-rose-100 to-rose-200 mb-2">
                             <div className="flex justify-between items-center mb-2">
-                                <span>RosyPost</span>
-                                <a href="#" className="w-6 h-6 text-rose-600 hover:text-rose-800 transition-all duration-500 ease-out transform hover:-translate-y-0.5 hover:translate-x-0.5">
+                            <Link to="/experience">Experience</Link>
+                                <Link to="/experience" className="w-6 h-6 text-rose-600 hover:text-rose-800 transition-all duration-500 ease-out transform hover:-translate-y-0.5 hover:translate-x-0.5">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                                         <path fillRule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clipRule="evenodd" />
                                     </svg>
-                                </a>
+                                </Link>
                                 
                             </div>
                             <img></img>
@@ -100,7 +101,7 @@ function Home() {
                             <hr className="my-2 border-t-3 border-rose-400" />
                             <div className="py-3 text-left">ClubFinder</div>
                             <hr className="my-2 border-t-3 border-rose-400" />
-                            <div className="py-3 text-left">Study Timer</div>
+                            <div className="py-3 text-left">Your face</div>
                         </div>
                         <div className="p-2 rounded-md border-2 border-rose-100 bg-gradient-to-br from-rose-100 to-rose-200 flex justify-center space-x-4">
                             <a href="https://github.com/aliangelinaaa" target="_blank" rel="noopener noreferrer" className='font-sans hover:text-rose-800'> GITHUB</a>

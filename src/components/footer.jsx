@@ -2,7 +2,7 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <footer className='bg-rose-100 py-6 rounded-md border-2 border-rose-100'>
+    <footer className='bg-gradient-to-br from-rose-100 to-rose-200 py-6 rounded-md border-2 border-rose-100'>
       <div className='container mx-auto flex flex-col md:flex-row justify-between items-center'>
         <p className='text-rose-600 mb-4 md:mb-0'>&copy; {new Date().getFullYear()} Nafisa Anzum. All rights reserved.</p>
         <nav>
