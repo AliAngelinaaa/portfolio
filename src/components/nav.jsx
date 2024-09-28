@@ -88,8 +88,8 @@ function Nav() {
             </div>
             <ul className="flex flex-row space-x-8 font-medium">
                 <li><Link to="/" className="text-rose-600 hover:text-rose-800 font-bold" onClick={() => scrollToSection('home')}>Home</Link></li>
-                <li><Link to="/" className="text-rose-600 hover:text-rose-800" onClick={() => scrollToSection('timeline')}>Projects</Link></li>
-                <li><Link to="/" className="text-rose-600 hover:text-rose-800" onClick={() => scrollToSection('skills')}>Skills</Link></li>
+                <li><Link to="/" className="text-rose-600 hover:text-rose-800 font-bold" onClick={() => scrollToSection('timeline')}>Projects</Link></li>
+                <li><Link to="/" className="text-rose-600 hover:text-rose-800 font-bold" onClick={() => scrollToSection('skills')}>Skills</Link></li>
             </ul>
         </div>
     </motion.nav>

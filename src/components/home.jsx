@@ -118,7 +118,7 @@ function Home() {
                             <hr className="my-2 border-t-3 border-rose-400" />
                             <div className="py-4 text-left">ClubFinder</div>
                             <hr className="my-2 border-t-3 border-rose-400" />
-                            <div className="py-4 text-left">Your face</div>
+                            <div className="py-4 text-left"><a href="https://www.linkedin.com/company/wit-unite/" target="_blank" rel="noopener noreferrer" className='font-bold hover:text-rose-800'>WIT Unite</a></div>
                             <img src={IMG_3744} className="rounded-lg mt-auto" alt="Your face" />
                         </div>
                         <div className="p-5 rounded-md border-2 border-rose-100 bg-gradient-to-br from-rose-100 to-rose-200 flex justify-center space-x-10 ">
