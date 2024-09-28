@@ -52,6 +52,7 @@ function Skills() {
 	const [currentRizz, setCurrentRizz] = useState('');
 	const [showEasterEgg, setShowEasterEgg] = useState(false);
 	const titleRef = useRef(null);
+	const [showMobileEasterEgg, setShowMobileEasterEgg] = useState(false);
 
 	const javaRizzLines = [
 		"Hey girl, are you a Java exception? Because you've caught my attention.",
@@ -93,6 +94,25 @@ function Skills() {
 
 		document.addEventListener('selectionchange', handleSelection);
 		return () => document.removeEventListener('selectionchange', handleSelection);
+	}, []);
+
+	useEffect(() => {
+		let lastTap = 0;
+		const handleDoubleTap = (event) => {
+			const now = new Date().getTime();
+			const DOUBLE_TAP_THRESHOLD = 300;
+			if (now - lastTap < DOUBLE_TAP_THRESHOLD) {
+				setShowMobileEasterEgg(true);
+				setTimeout(() => setShowMobileEasterEgg(false), 3000);
+			}
+			lastTap = now;
+		};
+
+		document.addEventListener('touchend', handleDoubleTap);
+
+		return () => {
+			document.removeEventListener('touchend', handleDoubleTap);
+		};
 	}, []);
 
 	const emojis = ['🚀', '💻', '🔧', '🎨', '📊', '🧠', '🌟', '🔥'];
@@ -174,7 +194,7 @@ function Skills() {
 						exit={{ opacity: 0, y: -50 }}
 						className="fixed top-4 left-1/2 transform -translate-x-1/2 bg-pink-600 text-white p-4 rounded-lg shadow-lg max-w-sm z-50"
 					>
-						<p className="text-sm font-medium">Java Rizz: {currentRizz}</p>
+						<p className="text-sm font-medium">{currentRizz}</p>
 					</motion.div>
 				)}
 				{showEasterEgg && (
@@ -187,6 +207,16 @@ function Skills() {
 						{emojis.map((emoji, index) => (
 							<ConfettiEmoji key={index} emoji={emoji} />
 						))}
+					</motion.div>
+				)}
+				{showMobileEasterEgg && (
+					<motion.div
+						initial={{ opacity: 0, y: 50 }}
+						animate={{ opacity: 1, y: 0 }}
+						exit={{ opacity: 0, y: 50 }}
+						className="fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-purple-600 text-white p-4 rounded-lg shadow-lg max-w-sm z-50"
+					>
+						<p className="text-sm font-medium">🎉 Mobile Easter Egg Found! 📱</p>
 					</motion.div>
 				)}
 			</AnimatePresence>

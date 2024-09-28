@@ -87,9 +87,9 @@ function Nav() {
                 <h1 className="text-2xl cursor-pointer" onClick={rickRoll}>Anzum</h1>
             </div>
             <ul className="flex flex-row space-x-8 font-medium">
-                <li><Link to="/" onClick={() => scrollToSection('home')}>Home</Link></li>
-                <li><Link to="/" onClick={() => scrollToSection('timeline')}>Projects</Link></li>
-                <li><Link to="/" onClick={() => scrollToSection('skills')}>Skils</Link></li>
+                <li><Link to="/" className="text-rose-600 hover:text-rose-800 font-bold" onClick={() => scrollToSection('home')}>Home</Link></li>
+                <li><Link to="/" className="text-rose-600 hover:text-rose-800" onClick={() => scrollToSection('timeline')}>Projects</Link></li>
+                <li><Link to="/" className="text-rose-600 hover:text-rose-800" onClick={() => scrollToSection('skills')}>Skills</Link></li>
             </ul>
         </div>
     </motion.nav>

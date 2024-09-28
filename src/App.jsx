@@ -65,14 +65,12 @@ function App() {
               <div id="skills">
                 <Skills />
               </div>
-              <div id="contact">
-                <Footer />
-              </div>
             </>
           } />
           <Route path="/experience" element={<Experience />} />
         </Routes>
         <ScrollToTopButton />
+        <Footer />
       </div>
     </Router>
   );

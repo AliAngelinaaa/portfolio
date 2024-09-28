@@ -65,8 +65,8 @@ function Home() {
                                 animate={{ x: 0, opacity: 1 }}
                                 transition={{ duration: 1, delay: loading ? 2 : 0 }}
                             >
-                                <div className="text-center mb-2">
-                                    <FlowerIcon className="w-6 h-6 sm:w-[1.5vw] sm:h-[1.5vw] text-rose-600 mx-auto" />
+                                <div className="mb-2">
+                                    <FlowerIcon className="w-6 h-6 sm:w-[1.5vw] sm:h-[1.5vw] text-rose-600" />
                                 </div>
                                 <div className="">
                                     Nafisa is a software developer with a passion for creating innovative solutions to complex problems. Graduating college in just three years, she has proven herself capable of handling demanding challenges. As the co-founder of WIT Unite, she is dedicated to empowering others while fostering a supportive environment for learning and growth. Nafisa thrives as a team player and is constantly seeking opportunities to learn and make a meaningful impact.
@@ -81,7 +81,7 @@ function Home() {
                             >
                                 <div className="flex justify-between items-center mb-2">
                                     <span>Have some questions?</span>
-                                    <a href="#" className="w-6 h-6 text-rose-600 hover:text-rose-800 transition-all duration-500 ease-out transform hover:-translate-y-0.5 hover:translate-x-0.5">
+                                    <a href="mailto:nanzum1140@gmail.com" className="w-6 h-6 text-rose-600 hover:text-rose-800 transition-all duration-500 ease-out transform hover:-translate-y-0.5 hover:translate-x-0.5">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                                             <path fillRule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clipRule="evenodd" />
                                         </svg>

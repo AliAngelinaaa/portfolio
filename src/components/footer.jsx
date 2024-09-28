@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Footer = () => {
   return (
@@ -7,11 +8,11 @@ const Footer = () => {
         <p className='text-rose-600 mb-4 md:mb-0'>&copy; {new Date().getFullYear()} Nafisa Anzum. All rights reserved.</p>
         <nav>
           <ul className='flex flex-wrap justify-center space-x-4'>
-            <li><a href="#" className='text-rose-600 hover:text-rose-800'>Projects</a></li>
-            <li><a href="#" className='text-rose-600 hover:text-rose-800'>About</a></li>
-            <li><a href="#" className='text-rose-600 hover:text-rose-800'>Contact</a></li>
-            <li><a href="https://github.com/aliangelinaaa" target="_blank" rel="noopener noreferrer" className='text-rose-600 hover:text-rose-800'>GitHub</a></li>
-            <li><a href="https://www.linkedin.com/in/nafisaanzum/" target="_blank" rel="noopener noreferrer" className='text-rose-600 hover:text-rose-800'>LinkedIn</a></li>
+            <li><Link to="/" className="text-rose-600 hover:text-rose-800 font-bold" onClick={() => scrollToSection('timeline')}>Projects</Link></li>
+            <li><Link to="/" className="text-rose-600 hover:text-rose-800 font-bold" onClick={() => scrollToSection('home')}>Home</Link></li>
+            <li><a href="mailto:nanzum1140@gmail.com" className='text-rose-600 hover:text-rose-800 font-bold'>Contact</a></li>
+            <li><a href="https://github.com/aliangelinaaa" target="_blank" rel="noopener noreferrer" className="text-rose-600 hover:text-rose-800 font-bold">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/nafisaanzum/" target="_blank" rel="noopener noreferrer" className="text-rose-600 hover:text-rose-800 font-bold">LinkedIn</a></li>
           </ul>
         </nav>
       </div>
