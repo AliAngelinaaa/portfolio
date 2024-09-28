@@ -81,7 +81,18 @@ const timelineData = [
     {
         "title": "Hamergency",
         "date": "August 2022",
-        "description": "Worked on this porject as part of a hackathon where we created a website showcasing  "
+        "description": `
+    <p class='text-sm md:text-base leading-relaxed text-gray-700'>
+        This project was developed during a hackathon aimed at raising awareness and providing essential resources on how to protect oneself from COVID-19 and Monkeypox. Our team collaborated to create an informative website that offered clear guidelines, safety tips, and up-to-date information on both diseases. The goal was to build a user-friendly platform that could easily communicate crucial health advice to a wide audience.
+    </p>
+    <p class='text-sm md:text-base leading-relaxed text-gray-700'>
+        Using fundamental HTML and CSS, we focused on creating a clean and accessible design that allowed users to navigate through different sections effortlessly. Despite the simplicity of the tools, we ensured that the website was responsive and informative, with a layout that adapted to both desktop and mobile devices. 
+    </p>
+    <p class='text-sm md:text-base leading-relaxed text-gray-700'>
+        Beyond the technical aspects, this project also emphasized the importance of teamwork and rapid problem-solving, as we had to build and deploy the site within the tight timeline of the hackathon. This experience enhanced my ability to collaborate under pressure while delivering a product that directly addressed a real-world problem.
+    </p>
+`
+
     },
     {
         "title": "To-Do List",
@@ -146,8 +157,16 @@ const timelineData = [
     },
     {
         "title": "Baby Bloom",
-        "date": "Spring 2023",
-        "description": "<p>This project was created for the Intro to Software Engineering class, where we learned a lot about Agile methodologies and Android development.</p>"
+"date": "Spring 2023",
+"description": `
+    <p class='text-sm md:text-base leading-relaxed text-gray-700'>
+        <span class='font-semibold'>Baby Bloom</span> was developed as part of the <span class='font-semibold'>Intro to Software Engineering</span> course during the Spring 2023 semester. This project introduced our team to core concepts like Agile methodologies and Android development, as we collaborated throughout the semester to bring our vision to life using Android Studio.
+    </p>
+    <p class='text-sm md:text-base leading-relaxed text-gray-700'>
+        The inspiration for Baby Bloom came from one of our teammates who had recently become a mother. The app is designed to assist new parents by providing them with helpful features to track their baby’s growth, monitor feeding schedules, and keep a record of important milestones. Throughout the project, we created detailed user stories, focusing on making the app both intuitive and practical for our target users.
+    </p>
+`,
+
     },
     {
         "title": "Polyglot Palace",

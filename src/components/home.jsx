@@ -5,6 +5,7 @@ import "../style/home.css";
 import {FaHeart } from 'react-icons/fa'; // Added FaFlower
 import { Link } from 'react-router-dom';
 import { FlowerIcon } from 'hugeicons-react';
+import IMG_3744 from '../images/IMG_3744.jpg';
 
 
 function Home() {
@@ -116,7 +117,7 @@ function Home() {
                             <hr className="my-2 border-t-3 border-rose-400" />
                             <div className="py-3 text-left">ClubFinder</div>
                             <hr className="my-2 border-t-3 border-rose-400" />
-                            <div className="py-3 text-left">Your face</div>
+                            <div className="py-3 text-left">Your face <img src={IMG_3744} /></div>
                         </div>
                         <div className="p-2 rounded-md border-2 border-rose-100 bg-gradient-to-br from-rose-100 to-rose-200 flex justify-center space-x-4">
                             <a href="https://github.com/aliangelinaaa" target="_blank" rel="noopener noreferrer" className=' hover:text-rose-800'> GITHUB</a>
