@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import image from '../images/image.jpeg';
 import "../style/home.css";
-import {FaHeart } from 'react-icons/fa'; // Added FaFlower
+import { FaHeart } from 'react-icons/fa'; // Added FaFlower
 import { Link } from 'react-router-dom';
 import { FlowerIcon } from 'hugeicons-react';
 import IMG_3744 from '../images/IMG_3744.jpg';
@@ -95,33 +95,35 @@ function Home() {
 
                     {/* Right Column */}
                     <motion.div
-                        className="w-full sm:w-1/3 gap-2 flex flex-col h-full mt-4 sm:mt-0"
+                        className="sm:w-1/3 flex flex-col mt-4 sm:mt-0 gap-4"
                         initial={{ x: '5vw', opacity: 0 }}
                         animate={{ x: 0, opacity: 1 }}
                         transition={{ duration: 1, delay: loading ? 3 : 0 }}
                     >
-                        <div className="flex-grow p-4 rounded-md border-2 border-rose-100 bg-gradient-to-br from-rose-100 to-rose-200 mb-2">
-                            <Link to="/experience">
-                                <div className="flex justify-between items-center mb-2">
+                        <div className="flex flex-col p-4 rounded-md border-2 border-rose-100 bg-gradient-to-br from-rose-100 to-rose-200 mb-2 font-bold ">
+                            <Link to="/experience" className="mb-2 font-bold py-2 hover:text-rose-800">
+                                <div className="flex justify-between items-center ">
                                     Experience
-                                    <div to="/experience" className="w-6 h-6 text-rose-600 hover:text-rose-800 transition-all duration-500 ease-out transform hover:-translate-y-0.5 hover:translate-x-0.5">
+                                    <div className="w-6 h-6 text-rose-600 hover:text-rose-800 transition-all duration-500 ease-out transform hover:-translate-y-0.5 hover:translate-x-0.5">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                                             <path fillRule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clipRule="evenodd" />
                                         </svg>
                                     </div>
                                 </div>
                             </Link>
-                            <img></img>
                             <hr className="my-2 border-t-3 border-rose-400" />
-                            <div className="py-3 text-left">PolyGlot Palace</div>
+                            <div className="py-4 text-left  ">
+                                <a href="https://sites.google.com/view/aliangelinaa/" target="_blank" rel="noopener noreferrer" className='font-bold hover:text-rose-800'>Previous Portfolio</a>
+                            </div>
                             <hr className="my-2 border-t-3 border-rose-400" />
-                            <div className="py-3 text-left">ClubFinder</div>
+                            <div className="py-4 text-left">ClubFinder</div>
                             <hr className="my-2 border-t-3 border-rose-400" />
-                            <div className="py-3 text-left">Your face <img src={IMG_3744} /></div>
+                            <div className="py-4 text-left">Your face</div>
+                            <img src={IMG_3744} className="rounded-lg mt-auto" alt="Your face" />
                         </div>
-                        <div className="p-2 rounded-md border-2 border-rose-100 bg-gradient-to-br from-rose-100 to-rose-200 flex justify-center space-x-4">
-                            <a href="https://github.com/aliangelinaaa" target="_blank" rel="noopener noreferrer" className=' hover:text-rose-800'> GITHUB</a>
-                            <a href="https://www.linkedin.com/in/nafisaanzum" target="_blank" rel="noopener noreferrer" className=" hover:text-rose-800">LINKEDIN</a>
+                        <div className="p-5 rounded-md border-2 border-rose-100 bg-gradient-to-br from-rose-100 to-rose-200 flex justify-center space-x-10 ">
+                            <a href="https://github.com/aliangelinaaa" target="_blank" rel="noopener noreferrer" className="hover:text-rose-800 font-bold">GITHUB</a>
+                            <a href="https://www.linkedin.com/in/nafisaanzum" target="_blank" rel="noopener noreferrer" className="hover:text-rose-800 font-bold">LINKEDIN</a>
                         </div>
                     </motion.div>
                 </div>

@@ -66,3 +66,65 @@ button:focus-visible {
 body {
   font-family: 'Nunito', sans-serif;
 }
+
+@keyframes float-up {
+  0% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(-50px); opacity: 0; }
+}
+
+.floating-number {
+  position: fixed;
+  color: gold;
+  font-weight: bold;
+  pointer-events: none;
+  animation: float-up 1s ease-out forwards;
+}
+
+.star-transition {
+  transition: all 0.3s ease;
+}
+
+.bg-rainbow {
+  background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+  background-size: 1800% 1800%;
+}
+
+.animate-rainbow {
+  animation: rainbow-bg 18s ease infinite;
+}
+
+.animate-color-change {
+  animation: color-change 4s infinite;
+}
+
+.animate-background-shift {
+  animation: background-shift 10s infinite;
+}
+
+
+@keyframes rainbow-bg {
+  0% { background-color: #ff0000; }
+  14% { background-color: #ff7f00; }
+  28% { background-color: #ffff00; }
+  42% { background-color: #00ff00; }
+  57% { background-color: #0000ff; }
+  71% { background-color: #8b00ff; }
+  85% { background-color: #ff00ff; }
+  100% { background-color: #ff0000; }
+}
+
+@keyframes color-change {
+  0% { color: #ff0000; }
+  25% { color: #00ff00; }
+  50% { color: #0000ff; }
+  75% { color: #ffff00; }
+  100% { color: #ff0000; }
+}
+
+@keyframes background-shift {
+  0% { background-color: #ff9999; }
+  25% { background-color: #99ff99; }
+  50% { background-color: #9999ff; }
+  75% { background-color: #ffff99; }
+  100% { background-color: #ff9999; }
+}
