@@ -4,7 +4,8 @@ import image from '../images/image.jpeg';
 import "../style/home.css";
 import {FaHeart } from 'react-icons/fa'; // Added FaFlower
 import { Link } from 'react-router-dom';
-import { GiFlowerPot } from 'react-icons/gi'; // Add this line
+import { FlowerIcon } from 'hugeicons-react';
+
 
 function Home() {
     // State to manage loading animation
@@ -19,7 +20,7 @@ function Home() {
     }, []);
 
     return (
-        <motion.div id="home" className="font-nunito text-base sm:text-[1vw]">
+        <motion.div id="home" className="font-nunito sm:text-[1vw]">
             {/* Main Content */}
             <div className="mx-auto mt-4 px-4 sm:px-0">
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -29,6 +30,7 @@ function Home() {
                             {/* Left Column - Quote */}
                             <motion.div
                                 className="flex-1 p-4 rounded-md border-2 border-rose-100 bg-gradient-to-br from-rose-100 to-rose-200 flex flex-col justify-center items-center"
+
                                 initial={{ x: '-5vw', opacity: 0 }}
                                 animate={{ x: 0, opacity: 1 }}
                                 transition={{ duration: 1, delay: loading ? 1.5 : 0 }}
@@ -36,7 +38,7 @@ function Home() {
                                 <div className="text-center mb-2">
                                     <FaHeart className="w-6 h-6 sm:w-[1.5vw] sm:h-[1.5vw] text-rose-600 mx-auto" />
                                 </div>
-                                <p className="text-lg sm:text-[2vw] italic mb-2 font-quicksand text-center">
+                                <p className="sm:text-[2vw] leading-relaxed italic mb-2 text-center">
                                     "A passionate developer eager to make a meaningful impact on the world, whether through
                                     <span className="font-bold text-rose-600"> vlogging and video editing</span>,
                                     expressing creativity as a <span className="font-bold">writer</span>, or
@@ -63,9 +65,9 @@ function Home() {
                                 transition={{ duration: 1, delay: loading ? 2 : 0 }}
                             >
                                 <div className="text-center mb-2">
-                                    <GiFlowerPot className="w-6 h-6 sm:w-[1.5vw] sm:h-[1.5vw] text-rose-600 mx-auto" />
+                                    <FlowerIcon className="w-6 h-6 sm:w-[1.5vw] sm:h-[1.5vw] text-rose-600 mx-auto" />
                                 </div>
-                                <div className="text-sm sm:text-base">
+                                <div className="">
                                     Nafisa is a software developer with a passion for creating innovative solutions to complex problems. Graduating college in just three years, she has proven herself capable of handling demanding challenges. As the co-founder of WIT Unite, she is dedicated to empowering others while fostering a supportive environment for learning and growth. Nafisa thrives as a team player and is constantly seeking opportunities to learn and make a meaningful impact.
                                 </div>
                             </motion.div>

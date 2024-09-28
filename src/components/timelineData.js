@@ -12,6 +12,11 @@ import polyglotpalacewf from '../images/polyglotpalacewf.png';
 import polyglotpalacewf1 from '../images/polyglotpalacewf1.png';
 import todolist from "../images/todolist.png";
 import procrastination1 from "../images/procrastination1.png"
+import procrastination2 from "../images/procrastination2.png"
+import study from "../images/study.png";
+import study1 from "../images/study1.png";
+import pop from "../images/pop.png";
+
 
 const timelineData = [
     {
@@ -59,7 +64,19 @@ const timelineData = [
     {
         "title": "Study Timer",
         "date": "April 2022",
-        "description": "Created during Break Through Tech's first ever Spring Guild. Introduction to bootstrap. Was working in a group of 2 within a time span of 8 hours to complete. "
+        "description": `<p>This project was created during my time as a participant in the Break Through Tech: Spring Guild. Over the course of three days, we were taught the basics of web design, with each day focusing on a different element such as HTML/CSS, JavaScript, and Bootstrap. Using these newly acquired skills, we were tasked with creating a project to assist our peers.</p>
+
+    <img src=${study} alt="Study Timer Screenshot 1" class="w-full rounded-lg shadow-md my-4" />
+
+    <p>Our team consisted of three members. Initially, it started as a duo but later expanded to include a third member. The objective was to develop a tool that could improve users' lives, particularly by helping them manage their schoolwork or daily tasks. After reflecting on how timing oneself could help complete multiple assignments efficiently, we decided to create a study timer.</p>
+
+    <p>As the team member with the most web design experience, I was responsible for implementing the JavaScript portion of the project. Although the program primarily focused on Bootstrap and frontend coding, many students struggled to understand how to incorporate JavaScript into their projects. I helped bridge that gap for our team.</p>
+
+    <p>While my focus was on making the timer function correctly, my teammates provided valuable assistance by reviewing the code and identifying issues that I might have overlooked. Their fresh perspectives helped troubleshoot and refine the project.</p>
+
+    <img src=${study1} alt="Study Timer Screenshot 2" class="w-full rounded-lg shadow-md my-4" />
+`
+
     },
     {
         "title": "Hamergency",
@@ -83,7 +100,8 @@ const timelineData = [
     Overall, this project laid a strong foundation for my understanding of human-computer interaction principles and reinforced the importance of considering user needs in the development process.
 </p>
 <img src=${todolist} alt="To-Do List Screenshot" class="w-full max-w-2xl mx-auto rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer" onclick="openImageModal(this.src)" />
-`
+`,
+"link": "https://aliangelinaaa.github.io/Cisc-3650-Assignment-1/"
 
 
     },
@@ -104,12 +122,26 @@ const timelineData = [
     {
         "title": "Procrasination the game",
         "date": "Spring 2023",
-        "description": "<p class='text-sm md:text-base leading-relaxed text-gray-700'>Developed as part of <span class='font-semibold'>CISC 3665: Game Design and Development</span> course, this game is designed to raise awareness about procrastination and offer strategies to overcome it. Dive into an interactive experience that not only entertains but educates users on managing time effectively.</p>",
+        "description": `<p class="text-sm md:text-base leading-relaxed text-gray-700">Developed as part of the <span class="font-semibold">CISC 3665: Game Design and Development</span> course, this game aims to raise awareness about procrastination while offering strategies to combat it. Immerse yourself in an interactive experience that not only entertains but educates users on effective time management.</p> 
+<h3 class="text-xl font-bold mb-2">Media</h3>
+<div class="grid grid-cols-1 gap-4 mb-4">
+    <img src=${procrastination1} alt="GitPulse Screenshot 1" class="w-full max-w-2xl mx-auto rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer" onclick="openImageModal(this.src)" /> 
+    <img src=${procrastination2} alt="GitPulse Screenshot 2" class="w-full max-w-2xl mx-auto rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer" onclick="openImageModal(this.src)" />
+</div>`,
+
         "link": "https://owenl0000.itch.io/procrastination"
     },{
         "title": "Balloon Pop",
         "date": "Spring 2023",
-        "description": "<p class='text-sm md:text-base leading-relaxed text-gray-700'>This was the final project for <span class='font-semibold'>CISC 3665: Game Design and Development</span>, where we built this game all semester long. My one in particular is very buggy and not pleasant to play with. It has three levels int eh game with the second one being more and more buggy and the last one having an instant kill if tocuhed by another character.</p>",
+        "description": `
+    <p class='text-sm md:text-base leading-relaxed text-gray-700'>
+        This was the final project for <span class='font-semibold'>CISC 3665: Game Design and Development</span>. Throughout the semester, we developed a game from start to finish. My project, while a learning experience, ended up with several bugs, making it somewhat challenging to play.
+    </p>
+    <p class='text-sm md:text-base leading-relaxed text-gray-700'>
+        The game consists of three levels, with each one progressively more complex and unfortunately, more buggy. The second level has notable glitches, and in the final level, there's an instant death mechanic triggered if the player character touches certain enemies, making it particularly difficult to complete.
+    </p>
+    <img src=${pop} alt="Game Screenshot" class="w-full max-w-2xl mx-auto rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer" onclick="openImageModal(this.src)" />
+`,
         "link": "https://aliangelinaaa.itch.io/nafisa-anzum-balloon-pop"
     },
     {
@@ -131,7 +163,8 @@ const timelineData = [
   On the technical design side, I contributed to creating the UML (Unified Modeling Language) diagrams that mapped out the relationships between different components and services in our application.
   </p>   <img src=${polyglotpalacedb} alt="Polyglot Palace Screenshot 2" class="w-full max-w-2xl mx-auto rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer" onclick="openImageModal(this.src)" />
 
-        `
+        `,
+        "link": "https://polyglotpalace.netlify.app/"
     },
     {
         "title": "GitPulse",
@@ -147,12 +180,14 @@ const timelineData = [
     <img src=${gitpulse2} alt="GitPulse Screenshot 2" class="w-full max-w-2xl mx-auto rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer" onclick="openImageModal(this.src)" />
 </div>
 
-        `
+        `,
+        "link":"https://github.com/rahimaaa/SEMetrics.frontend"
     },
     {
         "title": "Leet Sensei",
         "date": "October 2023",
-        "description": "<p>This was our submission for Hack Harvard 2023. Although we didn't win, I’m proud of the project’s success and the team’s determination. I played a key role in encouraging the team to continue despite the challenges and limited knowledge of some technologies.</p>"
+        "description": "<p>This was our submission for Hack Harvard 2023. Although we didn't win, I’m proud of the project’s success and the team’s determination. I played a key role in encouraging the team to continue despite the challenges and limited knowledge of some technologies.</p>",
+        "link":"https://github.com/segfal/LeetSensei"
     },
     {
         "title": "Rosy Post",

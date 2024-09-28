@@ -10,7 +10,7 @@ const exData = [
             "Selected for an exclusive cohort of 29 professionals in a fast-paced early career development program, designed to accelerate growth in the service recovery and incident management domain",
             "Shadowing P1 and P2 incidents to support effective recovery processes, learning from the Incident Management Process and assisting in timely resolutions."
         ],
-        "Image": "Healthfirst logo"
+        "Image": "https://example.com/healthfirst-logo.png"
     },
     {
         "Title": "Co-Founder",
@@ -21,7 +21,7 @@ const exData = [
             "Maintaining a discord server with 90+ members.",
             "Played a key role in building the community and fostering a space for data enthusiasts to connect, learn, and share knowledge."
         ],
-        "Image": "WIT Unite logo"
+        "Image": "https://example.com/wit-unite-logo.png"
     },
     {
         "Title": "Backend Engineering Intern",
@@ -34,7 +34,7 @@ const exData = [
             "Utilized BigQuery and its API to analyze data across three separate databases and ensure data integrity.",
             "Configured Amazon RDS for seamless data integration with Google Cloud Platform via Fivetran and PrivateLink."
         ],
-        "Image": "The New York Times logo"
+        "Image": "https://example.com/nyt-logo.png"
     },
     {
         "Title": "TTP Residency Fellow",
@@ -44,7 +44,7 @@ const exData = [
             "Selected as one of 40+ applicants to participate in the NYC Tech Talent Pipeline Web Development Program at Brooklyn College.",
             "Completed assignments with JavaScript, Node, Express, React, and PostgreSQL."
         ],
-        "Image": "NYC Tech Talent Pipeline logo"
+        "Image": "https://example.com/nyc-ttp-logo.png"
     },
     {
         "Title": "Engineering Intern",
@@ -64,7 +64,7 @@ const exData = [
          
           "Selected from a competitive applicant pool of 350+ to participate in the Google GSWEP Program, a 10-week internship that provides students with the opportunity to work 1:1 with a Google Software Engineer on real-world projects."
         ],
-        "Image": "Google logo"
+        "Image": "https://example.com/google-logo.png"
       },
       {
         "Title": "Intern",
@@ -75,7 +75,7 @@ const exData = [
           "Reduced code complexity and improved readability by removing unnecessary jQuery dependencies.",
           "Ensured code compatibility with modern browsers and devices by migrating to JavaScript."
         ],
-        "Image": "Wikitongues logo"
+        "Image": "https://example.com/wikitongues-logo.png"
       },
       {
         "Title": "Tech Intern",
@@ -85,7 +85,7 @@ const exData = [
           "Troubleshooted and resolved a variety of printer issues for over 100 users, improving printer uptime by 20%.",
           "Developed and implemented a new printer maintenance procedure, reducing the average time to resolve printer issues by 15%."
         ],
-        "Image": "NYC Department of Education logo"
+        "Image": "https://example.com/nyc-doe-logo.png"
       },
       {
         "Title": "Intern",
@@ -104,7 +104,7 @@ const exData = [
         "Description": [
           "Completed a cohort-based program focused on building a website with a unique approach to CSS and HTML using Bootstrap."
         ],
-        "Image": "Break Through Tech logo"
+        "Image": "https://example.com/break-through-tech-logo.png"
       },
       {
         "Title": "Fall 2019 Exploring Program Participant",
@@ -113,7 +113,7 @@ const exData = [
         "Description": [
           "Participated in a program where students recreated games using Java and JavaScript hosted by NYIT."
         ],
-        "Image": "New York Institute of Technology logo"
+        "Image": "https://example.com/nyit-logo.png"
       }
       
 
