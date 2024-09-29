@@ -11,6 +11,16 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --color-rose-100: #ffe4e6;
+  --color-rose-200: #fecdd3;
+  --color-rose-300: #fda4af;
+  --color-rose-600: #e11d48;
+  
+  --gradient-to-br: linear-gradient(to bottom right, var(--color-rose-100), var(--color-rose-200));
+  
+  --svg-fill-rose-600: #e11d48;
+  --svg-stroke-rose-600: #e11d48;
 }
 
 a {
@@ -65,6 +75,8 @@ button:focus-visible {
 
 body {
   font-family: 'Nunito', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
 @keyframes float-up {
@@ -128,3 +140,50 @@ body {
   75% { background-color: #ffff99; }
   100% { background-color: #ff9999; }
 }
+
+body.pastel-purple-theme {
+  --color-rose-100: #e6e6fa; /* Lavender */
+  --color-rose-200: #d8bfd8; /* Thistle */
+  --color-rose-300: #dda0dd; /* Plum */
+  --color-rose-600: #9370db; /* Medium Purple */
+  --color-pink-500: #d946ef;
+  --color-pink-600: #c026d3;
+  
+  --gradient-to-br: linear-gradient(to bottom right, var(--color-rose-100), var(--color-rose-200));
+  
+  background-color: #f0e6ff;
+  color: #4b0082;
+  
+  --svg-fill-rose-600: #9370db;
+  --svg-stroke-rose-600: #9370db;
+}
+
+/* Add any global styles that should change with the theme */
+body.pastel-purple-theme h1,
+body.pastel-purple-theme h2,
+body.pastel-purple-theme h3 {
+  color: var(--accent-color);
+}
+
+body.pastel-purple-theme button {
+  background-color: var(--accent-color);
+  color: var(--background-color);
+}
+
+body.pastel-purple-theme input,
+body.pastel-purple-theme textarea {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+}
+
+/* Add these new rules to target SVG elements */
+.text-rose-600 {
+  color: var(--color-rose-600);
+}
+
+.text-rose-600 svg {
+  color: var(--color-rose-600);
+  fill: var(--color-rose-600);
+}
+
+/* Add similar rules for other rose colors if needed */

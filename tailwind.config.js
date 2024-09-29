@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-export default {
+module.exports = {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -54,6 +54,18 @@ export default {
       },
       backgroundColor: {
         'rainbow': 'linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet)',
+      },
+      colors: {
+        rose: {
+          100: 'var(--color-rose-100, #ffe4e6)',
+          200: 'var(--color-rose-200, #fecdd3)',
+          300: 'var(--color-rose-300, #fda4af)',
+          600: 'var(--color-rose-600, #e11d48)',
+          // Add other rose shades as needed
+        },
+      },
+      backgroundImage: {
+        'gradient-to-br': 'var(--gradient-to-br)',
       },
     },
   },

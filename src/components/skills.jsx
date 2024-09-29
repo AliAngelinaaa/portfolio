@@ -28,7 +28,7 @@ function ConfettiEmoji({ emoji }) {
 	);
 }
 
-function SkillCard({ title, skills, onSkillClick }) {
+function SkillCard({ title, skills, onSkillClick, onProjectClick }) {
 	return (
 		<div id="skills" className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
 			<h3 className="text-xl font-semibold mb-4 text-pink-600">{title}</h3>

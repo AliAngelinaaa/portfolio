@@ -8,6 +8,7 @@ import Footer from './components/footer';
 import Skills from './components/skills';
 import Home from './components/home';
 import Experience from './components/experience';
+import { initEasterEgg, cleanupEasterEgg } from './utils/easterEgg';
 
 function ScrollToTopButton() {
   const [showScrollTop, setShowScrollTop] = useState(false);
@@ -49,6 +50,13 @@ function ScrollToTopButton() {
 }
 
 function App() {
+  useEffect(() => {
+    initEasterEgg();
+    return () => {
+      cleanupEasterEgg();
+    };
+  }, []);
+
   return (
     <Router basename="/portfolio/">
       <div>
