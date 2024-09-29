@@ -16,7 +16,7 @@ function Timeline() {
     }, []);
 
     const toggleExpand = (index) => {
-        setExpandedIndex(index);
+        setExpandedIndex(prevIndex => prevIndex === index ? null : index);
     };
 
     return (
