@@ -165,7 +165,7 @@ function Experience() {
                 degree: "Bachelor of Science in Computer Science",
                 date: "2021 - 2024",
                 achievements: [
-                  "Dean's List: Spring 2024, Fall 2023, Spring 3033",
+                  "Dean's List: Spring 2024, Fall 2023, Spring 2023",
                   "Member of Computer Science Club",
                 ]
               },
