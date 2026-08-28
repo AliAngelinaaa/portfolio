@@ -1,81 +1,88 @@
-# My Portfolio
+# Nafisa Anzum — Portfolio
 
-Welcome to my personal portfolio website built with React and Vite!
+Personal portfolio site built with React and Vite, deployed to GitHub Pages at [aliangelinaaa.github.io/portfolio](https://aliangelinaaa.github.io/portfolio/).
 
-## 🚀 Features
+## Features
 
-- Modern and responsive design
-- Showcase of my projects
-- About me section
-- Contact information
-- Skills and technologies
+- Responsive hero with resume download
+- Featured project case studies (Problem → Solution → Outcome)
+- Filterable project timeline by category
+- Skills showcase with easter eggs
+- Experience page with work history
+- Dark mode toggle
+- Google Analytics support (optional)
+- Open Graph / Twitter Card meta tags for link previews
 
-## 🛠️ Technologies Used
+## Tech Stack
 
-- React
-- Vite
-- HTML5
-- CSS3
+- React 18 + Vite
 - Tailwind CSS
-- JavaScript (ES6+)
+- Framer Motion
+- React Router
+- React Scroll
 
-## 🏁 Getting Started
+## Getting Started
 
-### Prerequisites
-
-- Node.js (v14.0.0 or later)
-- npm (v6.0.0 or later)
-
-### Installation
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/your-portfolio.git
-   ```
-
-2. Navigate to the project directory:
-   ```bash
-   cd your-portfolio
-   ```
-
-3. Install dependencies:
-   ```bash
-   npm install
-   ```
-
-4. Start the development server:
-   ```bash
-   npm run dev
-   ```
-
-5. Open your browser and visit `http://localhost:5173` to view the website.
-
-## 📁 Project Structure
-
-- `src/`: Contains the source code for the React components and styles
-- `public/`: Stores static assets like images and the `index.html` file
-- `dist/`: (Generated) Contains the production build files
-
-## 🚀 Deployment
-
-To create a production build, run:
-
-```
-npm run build
+```bash
+npm install
+npm run dev
 ```
 
-The built files will be in the `dist/` directory, ready to be deployed to your preferred hosting platform.
+Visit `http://localhost:5173/portfolio/`
 
-## 📝 License
+## Configuration
 
-This project is open source and available under the [MIT License](LICENSE).
+### Resume
 
-## 📞 Contact
+Replace `public/resume.pdf` with your actual resume PDF. The download buttons in the nav and hero will serve this file.
 
-Your Name - [your.email@example.com](mailto:your.email@example.com)
+### Analytics
 
-Project Link: [https://github.com/yourusername/your-portfolio](https://github.com/yourusername/your-portfolio)
+1. Copy `.env.example` to `.env.local`
+2. Add your Google Analytics 4 Measurement ID:
 
----
+```
+VITE_GA_MEASUREMENT_ID=G-XXXXXXXXXX
+```
 
-Feel free to customize this README to better fit your specific portfolio and add any additional sections or information you think would be valuable!
+Analytics only loads when this variable is set.
+
+### Social Preview Image
+
+Replace `public/og-image.jpg` with a 1200×630 image for link previews on LinkedIn, iMessage, etc.
+
+## Scripts
+
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start dev server |
+| `npm run build` | Production build to `dist/` |
+| `npm run preview` | Preview production build |
+| `npm run deploy` | Build and deploy to GitHub Pages |
+
+## Project Structure
+
+```
+src/
+├── components/     # React components (Home, Nav, Timeline, etc.)
+├── context/        # Theme provider (dark mode)
+├── data/           # Featured project case studies
+├── images/         # Project screenshots and photos
+├── utils/          # Analytics, easter eggs
+public/
+├── resume.pdf      # Downloadable resume (replace with yours)
+└── og-image.jpg    # Social preview image
+```
+
+## Easter Eggs
+
+- Click "Home" in the nav 5 times → cat appears
+- Type `purple` → purple theme
+- Click Java icon 3 times in Skills → Java rizz lines
+- On Experience page, type `hello`, `dance`, or `witu`
+
+## Contact
+
+- Email: [nanzum1140@gmail.com](mailto:nanzum1140@gmail.com)
+- GitHub: [@aliangelinaaa](https://github.com/aliangelinaaa)
+- LinkedIn: [nafisaanzum](https://www.linkedin.com/in/nafisaanzum)

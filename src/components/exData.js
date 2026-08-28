@@ -12,11 +12,11 @@ const exData = [
     {
         "Title": "Co-Founder",
         "Company": "WIT Unite",
-        "Date": "Nov 2023 - Present · 11 mos",
+        "Date": "Nov 2023 - Jan 2025",
         "Description": [
-            "Co-founded an initiative to inform CUNY school students about internships and career development programs in NYC and the wider New York area.",
-            "Maintaining a discord server with 90+ members.",
-            "Played a key role in building the community and fostering a space for data enthusiasts to connect, learn, and share knowledge."
+            "Co-founded an initiative to inform CUNY students about internships and career development programs in NYC and the wider New York area.",
+            "Built and maintained a Discord server with 90+ members before winding down the organization in January 2025.",
+            "Played a key role in building the community and fostering a space for students to connect, learn, and share knowledge."
         ],
         "Image": "https://aliangelinaaa.github.io/witunite/static/media/logo.81df7196691d685985fa.png"
     },

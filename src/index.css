@@ -1,82 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
-  font-family: 'Nunito', Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  line-height: 1.6;
   font-weight: 400;
-
-  color: #2b2b2b;
-  background: linear-gradient(to bottom, white, rgb(255 241 242)); /* Light pink: #FFE4E1 */
-  min-height: 100vh; /* Ensure the gradient covers the entire viewport height */
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
+  --color-rose-50: #fff1f2;
   --color-rose-100: #ffe4e6;
   --color-rose-200: #fecdd3;
   --color-rose-300: #fda4af;
   --color-rose-600: #e11d48;
-  
-  --gradient-to-br: linear-gradient(to bottom right, var(--color-rose-100), var(--color-rose-200));
-  
-  --svg-fill-rose-600: #e11d48;
-  --svg-stroke-rose-600: #e11d48;
+  --color-rose-700: #be123c;
+
+  --gradient-to-br: linear-gradient(135deg, var(--color-rose-50) 0%, var(--color-rose-100) 50%, #fff 100%);
+  --mesh-gradient: radial-gradient(at 40% 20%, rgba(254, 205, 211, 0.4) 0px, transparent 50%),
+    radial-gradient(at 80% 0%, rgba(253, 164, 175, 0.25) 0px, transparent 50%),
+    radial-gradient(at 0% 50%, rgba(255, 228, 230, 0.5) 0px, transparent 50%),
+    radial-gradient(at 80% 80%, rgba(254, 205, 211, 0.3) 0px, transparent 50%);
+
+  --text-primary: #1c1917;
+  --text-secondary: #57534e;
+  --text-muted: #78716c;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+* {
+  scroll-behavior: smooth;
 }
-a:hover {
-  color: #535bf2;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background: linear-gradient(to bottom, white, #FFE4E1); /* Light pink: #FFE4E1 */
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-}
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
 body {
-  font-family: 'Nunito', sans-serif;
-  background-color: var(--background-color);
-  color: var(--text-color);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: var(--text-primary);
+  background-color: #fafafa;
+  min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+[data-theme="dark"] {
+  --color-rose-50: #1c1012;
+  --color-rose-100: #2a1218;
+  --color-rose-200: #4a1c28;
+  /* Keep 300+ light for text accents on dark backgrounds */
+  --color-rose-300: #fda4af;
+  --color-rose-600: #fb7185;
+  --color-rose-700: #fecdd3;
+
+  --gradient-to-br: linear-gradient(135deg, #1c1917 0%, #1c1012 50%, #0c0a09 100%);
+  --mesh-gradient: radial-gradient(at 40% 20%, rgba(127, 41, 64, 0.15) 0px, transparent 50%),
+    radial-gradient(at 80% 0%, rgba(251, 113, 133, 0.08) 0px, transparent 50%),
+    radial-gradient(at 0% 50%, rgba(74, 28, 40, 0.1) 0px, transparent 50%);
+
+  --text-primary: #fafaf9;
+  --text-secondary: #d6d3d1;
+  --text-muted: #a8a29e;
+  --text-body: #e7e5e4;
+  --surface: #1c1917;
+  --surface-elevated: #292524;
+}
+
+[data-theme="dark"] body {
+  background-color: #0c0a09;
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .bg-mesh {
+  opacity: 0.2 !important;
+}
+
+[data-theme="dark"] ::selection {
+  background-color: var(--color-rose-300);
+  color: #fff;
+}
+
+/* Injected project HTML — override hardcoded light-mode Tailwind classes */
+[data-theme="dark"] .project-prose,
+[data-theme="dark"] .project-prose p,
+[data-theme="dark"] .project-prose li,
+[data-theme="dark"] .project-prose .text-gray-700,
+[data-theme="dark"] .project-prose .text-gray-600,
+[data-theme="dark"] .project-prose .text-black {
+  color: var(--text-body) !important;
+}
+
+[data-theme="dark"] .project-prose h3,
+[data-theme="dark"] .project-prose h4,
+[data-theme="dark"] .project-prose strong {
+  color: var(--text-primary) !important;
+}
+
+[data-theme="dark"] .project-prose a {
+  color: #fda4af !important;
+}
+
+[data-theme="dark"] .project-prose a:hover {
+  color: #fecdd3 !important;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+::selection {
+  background-color: var(--color-rose-200);
+  color: var(--color-rose-800, #9f1239);
 }
 
 @keyframes float-up {
@@ -113,7 +144,6 @@ body {
   animation: background-shift 10s infinite;
 }
 
-
 @keyframes rainbow-bg {
   0% { background-color: #ff0000; }
   14% { background-color: #ff7f00; }
@@ -142,41 +172,31 @@ body {
 }
 
 body.pastel-purple-theme {
-  --color-rose-100: #e6e6fa; /* Lavender */
-  --color-rose-200: #d8bfd8; /* Thistle */
-  --color-rose-300: #dda0dd; /* Plum */
-  --color-rose-600: #9370db; /* Medium Purple */
-  --color-pink-500: #d946ef;
-  --color-pink-600: #c026d3;
-  
-  --gradient-to-br: linear-gradient(to bottom right, var(--color-rose-100), var(--color-rose-200));
-  
+  --color-rose-50: #f5f0ff;
+  --color-rose-100: #e6e6fa;
+  --color-rose-200: #d8bfd8;
+  --color-rose-300: #dda0dd;
+  --color-rose-600: #9370db;
+  --color-rose-700: #7b68ee;
+
+  --gradient-to-br: linear-gradient(135deg, #f5f0ff 0%, #e6e6fa 50%, #fff 100%);
+  --mesh-gradient: radial-gradient(at 40% 20%, rgba(216, 191, 216, 0.4) 0px, transparent 50%),
+    radial-gradient(at 80% 0%, rgba(221, 160, 221, 0.25) 0px, transparent 50%);
+
   background-color: #f0e6ff;
   color: #4b0082;
-  
-  --svg-fill-rose-600: #9370db;
-  --svg-stroke-rose-600: #9370db;
+
+  --text-primary: #4b0082;
+  --text-secondary: #6a5acd;
+  --text-muted: #9370db;
 }
 
-/* Add any global styles that should change with the theme */
 body.pastel-purple-theme h1,
 body.pastel-purple-theme h2,
 body.pastel-purple-theme h3 {
-  color: var(--accent-color);
+  color: var(--color-rose-700);
 }
 
-body.pastel-purple-theme button {
-  background-color: var(--accent-color);
-  color: var(--background-color);
-}
-
-body.pastel-purple-theme input,
-body.pastel-purple-theme textarea {
-  background-color: var(--secondary-color);
-  color: var(--text-color);
-}
-
-/* Add these new rules to target SVG elements */
 .text-rose-600 {
   color: var(--color-rose-600);
 }
@@ -186,4 +206,44 @@ body.pastel-purple-theme textarea {
   fill: var(--color-rose-600);
 }
 
-/* Add similar rules for other rose colors if needed */
+@layer components {
+  .text-body {
+    @apply text-stone-600 dark:text-stone-200;
+  }
+
+  .text-muted {
+    @apply text-stone-500 dark:text-stone-300;
+  }
+
+  .section-heading {
+    @apply font-serif text-4xl md:text-5xl text-stone-900 dark:text-stone-50 tracking-tight;
+  }
+
+  .section-subheading {
+    @apply text-rose-600 dark:text-rose-300 uppercase tracking-widest text-sm font-semibold mb-2;
+  }
+
+  .card {
+    @apply glass rounded-2xl border border-white/60 dark:border-stone-600/50 shadow-soft transition-all duration-300;
+  }
+
+  .card-hover {
+    @apply hover:shadow-card-hover hover:-translate-y-1;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-5 py-2.5 bg-rose-600 text-white font-semibold rounded-full
+      shadow-soft hover:bg-rose-700 hover:shadow-card transition-all duration-300 hover:-translate-y-0.5;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center gap-2 px-5 py-2.5 border-2 border-rose-200 dark:border-rose-500
+      text-rose-700 dark:text-stone-100 font-semibold rounded-full
+      hover:bg-rose-50 dark:hover:bg-rose-950/40 hover:border-rose-300 dark:hover:border-rose-400 transition-all duration-300;
+  }
+
+  .link-arrow {
+    @apply inline-flex items-center gap-1 text-rose-600 dark:text-rose-300 font-semibold
+      hover:text-rose-800 dark:hover:text-rose-200 transition-all duration-300;
+  }
+}

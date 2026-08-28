@@ -2,134 +2,104 @@ import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import image from '../images/image.jpeg';
 import "../style/home.css";
-import { FaHeart } from 'react-icons/fa'; // Added FaFlower
+import { FaGithub, FaLinkedin, FaEnvelope, FaDownload } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
-import { FlowerIcon } from 'hugeicons-react';
-import IMG_3744 from '../images/IMG_3744.jpg';
+import { trackEvent } from '../utils/analytics';
 
+const RESUME_URL = `${import.meta.env.BASE_URL}resume.pdf`;
+
+const fadeUp = (delay = 0) => ({
+  initial: { y: 24, opacity: 0 },
+  animate: { y: 0, opacity: 1 },
+  transition: { duration: 0.7, delay, ease: [0.22, 1, 0.36, 1] },
+});
 
 function Home() {
-    // State to manage loading animation
-    const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(true);
 
-    // Hide everything else except the picture for 4 seconds
-    useEffect(() => {
-        const timer = setTimeout(() => {
-            setLoading(false);
-        }, 2000); // 1-second delay
-        return () => clearTimeout(timer);
-    }, []);
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 2000);
+    return () => clearTimeout(timer);
+  }, []);
 
-    return (
-        <motion.div id="home" className="font-nunito sm:text-[1vw]">
-            {/* Main Content */}
-            <div className="mx-auto mt-4 px-4 sm:px-0">
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                    {/* Left Column */}
-                    <div className="flex flex-col space-y-2 w-full sm:w-2/3 gap-2">
-                        <div className="flex flex-col sm:flex-row gap-3">
-                            {/* Left Column - Quote */}
-                            <motion.div
-                                className="flex-1 p-4 rounded-md border-2 border-rose-100 bg-gradient-to-br from-rose-100 to-rose-200 flex flex-col justify-center items-center"
+  const d = (base) => loading ? base : 0;
 
-                                initial={{ x: '-5vw', opacity: 0 }}
-                                animate={{ x: 0, opacity: 1 }}
-                                transition={{ duration: 1, delay: loading ? 1.5 : 0 }}
-                            >
-                                <div className="text-center mb-2">
-                                    <FaHeart className="w-6 h-6 sm:w-[1.5vw] sm:h-[1.5vw] text-rose-600 mx-auto" />
-                                </div>
-                                <p className="sm:text-[2vw] leading-relaxed italic mb-2 text-center">
-                                    "A passionate developer eager to make a meaningful impact on the world, whether through
-                                    <span className="font-bold text-rose-600"> vlogging and video editing</span>,
-                                    expressing creativity as a <span className="font-bold">writer</span>, or
-                                    <span className="font-bold text-rose-600"> helping others with genuine passion</span>."
-                                </p>
-                            </motion.div>
+  const handleResumeDownload = () => {
+    trackEvent('resume_download', { method: 'hero' });
+  };
 
-                            {/* Right Column - Image */}
-                            <motion.div
-                                className="rounded-md mt-4 sm:mt-0"
-                                initial={{ opacity: 1, scale: 2 }}
-                                animate={{ opacity: 1, scale: 1 }}
-                                transition={{ type: "spring", duration: 1, delay: loading ? 0.5 : 0 }}
-                            >
-                                <img src={image} className="w-full sm:w-auto aspect-[3/4] object-cover rounded-md imageNafisa" alt="Nafisa" />
-                            </motion.div>
-                        </div>
-
-                        <div className="flex flex-col sm:flex-row gap-3">
-                            <motion.div
-                                className="aspect-auto sm:aspect-[3/2] flex-1 p-4 rounded-md border-2 border-rose-100 bg-gradient-to-br from-rose-100 to-rose-200 flex flex-col justify-end"
-                                initial={{ x: '-5vw', opacity: 0 }}
-                                animate={{ x: 0, opacity: 1 }}
-                                transition={{ duration: 1, delay: loading ? 2 : 0 }}
-                            >
-                                <div className="mb-2">
-                                    <FlowerIcon className="w-6 h-6 sm:w-[1.5vw] sm:h-[1.5vw] text-rose-600" />
-                                </div>
-                                <div className="">
-                                    Nafisa is a software developer with a passion for creating innovative solutions to complex problems. Graduating college in just three years, she has proven herself capable of handling demanding challenges. As the co-founder of WIT Unite, she is dedicated to empowering others while fostering a supportive environment for learning and growth. Nafisa thrives as a team player and is constantly seeking opportunities to learn and make a meaningful impact.
-                                </div>
-                            </motion.div>
-
-                            <motion.div
-                                className="aspect-auto sm:aspect-[3/2] flex-1 p-4 rounded-md border-2 border-rose-300 bg-rose-300 flex flex-col"
-                                initial={{ y: '5vw', opacity: 0 }}
-                                animate={{ y: 0, opacity: 1 }}
-                                transition={{ duration: 1, delay: loading ? 2.5 : 0 }}
-                            >
-                                <div className="flex justify-between items-center mb-2">
-                                    <span>Have some questions?</span>
-                                    <a href="mailto:nanzum1140@gmail.com" className="w-6 h-6 text-rose-600 hover:text-rose-800 transition-all duration-500 ease-out transform hover:-translate-y-0.5 hover:translate-x-0.5">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                            <path fillRule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clipRule="evenodd" />
-                                        </svg>
-                                    </a>
-                                </div>
-                                <div className="flex-grow"></div>
-                                <div className="text-3xl sm:text-[4vw] font-bold text-center leading-none">Contact Me</div>
-                            </motion.div>
-                        </div>
-                    </div>
-
-                    {/* Right Column */}
-                    <motion.div
-                        className="sm:w-1/3 flex flex-col mt-4 sm:mt-0 gap-4"
-                        initial={{ x: '5vw', opacity: 0 }}
-                        animate={{ x: 0, opacity: 1 }}
-                        transition={{ duration: 1, delay: loading ? 3 : 0 }}
-                    >
-                        <div className="flex flex-col p-4 rounded-md border-2 border-rose-100 bg-gradient-to-br from-rose-100 to-rose-200 mb-2 font-bold ">
-                            <Link to="/experience" className="mb-2 font-bold py-2 hover:text-rose-800">
-                                <div className="flex justify-between items-center ">
-                                    Experience
-                                    <div className="w-6 h-6 text-rose-600 hover:text-rose-800 transition-all duration-500 ease-out transform hover:-translate-y-0.5 hover:translate-x-0.5">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                            <path fillRule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clipRule="evenodd" />
-                                        </svg>
-                                    </div>
-                                </div>
-                            </Link>
-                            <hr className="my-2 border-t-3 border-rose-400" />
-                            <div className="py-4 text-left  ">
-                                <a href="https://sites.google.com/view/aliangelinaa/" target="_blank" rel="noopener noreferrer" className='font-bold hover:text-rose-800'>Previous Portfolio</a>
-                            </div>
-                            <hr className="my-2 border-t-3 border-rose-400" />
-                            <div className="py-4 text-left">ClubFinder</div>
-                            <hr className="my-2 border-t-3 border-rose-400" />
-                            <div className="py-4 text-left"><a href="https://www.linkedin.com/company/wit-unite/" target="_blank" rel="noopener noreferrer" className='font-bold hover:text-rose-800'>WIT Unite</a></div>
-                            <img src={IMG_3744} className="rounded-lg mt-auto" alt="Your face" />
-                        </div>
-                        <div className="p-5 rounded-md border-2 border-rose-100 bg-gradient-to-br from-rose-100 to-rose-200 flex justify-center space-x-10 ">
-                            <a href="https://github.com/aliangelinaaa" target="_blank" rel="noopener noreferrer" className="hover:text-rose-800 font-bold">GITHUB</a>
-                            <a href="https://www.linkedin.com/in/nafisaanzum" target="_blank" rel="noopener noreferrer" className="hover:text-rose-800 font-bold">LINKEDIN</a>
-                        </div>
-                    </motion.div>
-                </div>
+  return (
+    <section id="home" className="relative pt-8 pb-16 md:pt-12 md:pb-20">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+          <motion.div {...fadeUp(d(0.2))}>
+            <p className="section-subheading">Service Recovery Analyst @ Healthfirst</p>
+            <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl text-stone-900 dark:text-stone-50 leading-[1.1] mb-6">
+              Hi, I'm{' '}
+              <span className="italic text-rose-600 dark:text-rose-300">Nafisa</span>
+            </h1>
+            <p className="text-lg text-body leading-relaxed mb-4 max-w-lg">
+              A passionate developer eager to make a meaningful impact — whether through
+              <span className="font-semibold text-rose-600 dark:text-rose-300"> vlogging and video editing</span>,
+              expressing creativity as a <span className="font-semibold dark:text-stone-100">writer</span>, or
+              <span className="font-semibold text-rose-600 dark:text-rose-300"> helping others with genuine passion</span>.
+            </p>
+            <p className="text-body leading-relaxed mb-8 max-w-lg">
+              I graduated Brooklyn College in three years, previously co-founded WIT Unite to empower CUNY students
+              (2023–2025), and interned at The New York Times before joining Healthfirst in service recovery and
+              incident management.
+            </p>
+            <div className="flex flex-wrap gap-3">
+              <a href="mailto:nanzum1140@gmail.com" className="btn-primary">
+                <FaEnvelope className="w-4 h-4" />
+                Contact Me
+              </a>
+              <a
+                href={RESUME_URL}
+                download="Nafisa_Anzum_Resume.pdf"
+                onClick={handleResumeDownload}
+                className="btn-outline"
+              >
+                <FaDownload className="w-4 h-4" />
+                Download Resume
+              </a>
+              <Link to="/experience" className="btn-outline">
+                View Experience
+              </Link>
             </div>
-        </motion.div>
-    );
+            <div className="flex gap-4 mt-8">
+              <a href="https://github.com/aliangelinaaa" target="_blank" rel="noopener noreferrer"
+                className="p-2.5 rounded-full bg-white/80 dark:bg-stone-800 text-stone-600 dark:text-stone-200 hover:text-rose-600 dark:hover:text-rose-300 hover:border-rose-200 dark:hover:border-rose-500 border border-rose-100 dark:border-stone-600 shadow-soft transition-all duration-300 hover:-translate-y-0.5"
+                aria-label="GitHub">
+                <FaGithub className="w-5 h-5" />
+              </a>
+              <a href="https://www.linkedin.com/in/nafisaanzum" target="_blank" rel="noopener noreferrer"
+                className="p-2.5 rounded-full bg-white/80 dark:bg-stone-800 text-stone-600 dark:text-stone-200 hover:text-rose-600 dark:hover:text-rose-300 hover:border-rose-200 dark:hover:border-rose-500 border border-rose-100 dark:border-stone-600 shadow-soft transition-all duration-300 hover:-translate-y-0.5"
+                aria-label="LinkedIn">
+                <FaLinkedin className="w-5 h-5" />
+              </a>
+            </div>
+          </motion.div>
+
+          <motion.div
+            className="relative flex justify-center lg:justify-end"
+            initial={{ opacity: 0, scale: 1.05 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ type: 'spring', duration: 1, delay: d(0) }}
+          >
+            <div className="relative">
+              <div className="absolute -inset-4 bg-gradient-to-br from-rose-200 to-rose-100 dark:from-rose-900 dark:to-stone-900 rounded-3xl blur-2xl opacity-60" aria-hidden="true" />
+              <img
+                src={image}
+                className="relative imageNafisa rounded-2xl shadow-card object-cover ring-4 ring-white/80 dark:ring-stone-800/80"
+                alt="Nafisa Anzum"
+              />
+            </div>
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
 }
 
 export default Home;
