@@ -163,6 +163,15 @@ function Experience() {
             <div className="grid md:grid-cols-2 gap-6">
               {[
                 {
+                  school: "Northeastern University",
+                  degree: "Master of Science in Information Systems (MSIS)",
+                  date: "Jan 2025 - Apr 2026",
+                  achievements: [
+                    "Graduated April 2026",
+                    "Coursework in agile software development, UX design, and web application engineering",
+                  ]
+                },
+                {
                   school: "Brooklyn College",
                   degree: "Bachelor of Science in Computer Science",
                   date: "2021 - 2024",

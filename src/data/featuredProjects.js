@@ -1,22 +1,62 @@
 import polyglotpalace from '../images/polyglotpalace.png';
-import gitpulse1 from '../images/gitpulse1.png';
-import clubfinder from '../images/clubfinder.png';
+import elegantBoutique from '../images/elegant-boutique.png';
+import studySyncHifi from '../images/studysync-hifi.png';
+import homyfyHome from '../images/homyfy-home.png';
+
+const CASE_STUDY_URL = `${import.meta.env.BASE_URL}Final%20Presenation.pptx`;
 
 const featuredProjects = [
   {
-    id: 'rosy-post',
-    title: 'Rosy Post',
-    date: 'July – August 2024',
-    tagline: 'Internal tooling built during NYT Maker Week',
-    role: 'Backend Developer',
-    tech: ['Go', 'APIs', 'Agile'],
+    id: 'studysync',
+    title: 'StudySync',
+    date: 'July 2025',
+    tagline: 'UI/UX case study & Figma prototype for a study planning app',
+    role: 'UX Designer & Researcher',
+    tech: ['Figma', 'User Research', 'Wireframing', 'Prototyping'],
+    image: studySyncHifi,
     problem:
-      'During Maker Week at The New York Times, our team needed to build a useful internal product under a tight hackathon timeline while learning Go on the job.',
+      'High school and college students struggle to manage tasks, schedule study time, and stay motivated without a tool that combines planning, focus, and progress tracking in one place.',
     solution:
-      'Contributed to backend development in Go, collaborating with engineers on a tool designed for potential use within the WITU community ecosystem.',
+      'Ran user research and MoSCoW prioritization, then designed low- and high-fidelity flows for onboarding, a task dashboard, an AI schedule generator, a focus timer, and profile settings — with a cohesive sky-blue visual system.',
     outcome:
-      'Delivered a working prototype within the internship sprint and gained hands-on experience shipping production-adjacent code at a major media company.',
-    link: null,
+      'Delivered a clickable Figma prototype and full case study presentation covering the end-to-end design process for CSYE 7280.',
+    link: 'https://www.figma.com/proto/jPDDqiX9n0ZDuwndPnKV1Q/StudySync?node-id=0-1&t=6zHTeVTraAvAwnAR-1',
+    linkLabel: 'View Prototype',
+    secondaryLink: CASE_STUDY_URL,
+    secondaryLinkLabel: 'Case Study (PPT)',
+  },
+  {
+    id: 'homyfy',
+    title: 'Homyfy',
+    date: 'Spring 2025',
+    tagline: 'Mobile home-decor app prototype built in an agile team sprint',
+    role: 'Team Member & UI Designer',
+    tech: ['Figma', 'Agile', 'Mobile UX', 'Prototyping'],
+    image: homyfyHome,
+    problem:
+      'Shoppers looking for curated home furniture often bounce between scattered catalogs and generic e-commerce apps without a cohesive, design-forward browsing experience.',
+    solution:
+      'Collaborated with Team 7 on INFO 7245 to design Homyfy — a mobile prototype with sign-up, search, favorites, and category browsing flows, using a warm luxury aesthetic tailored to home decor.',
+    outcome:
+      'Delivered a clickable high-fidelity Figma prototype covering core user journeys, practicing agile iteration from requirements through final presentation.',
+    link: 'https://www.figma.com/proto/XA1tBrmf8EmtiYPJoJsNhe/INFO-7245---Team-7?node-id=1-2428',
+    linkLabel: 'View Prototype',
+  },
+  {
+    id: 'elegant-boutique',
+    title: 'Elegant Boutique',
+    date: 'December 2025',
+    tagline: 'Responsive fashion storefront for a dress boutique',
+    role: 'Full-Stack Developer',
+    tech: ['HTML', 'CSS', 'JavaScript', 'Responsive Design'],
+    image: elegantBoutique,
+    problem:
+      'A boutique needed a polished online presence where customers could browse dresses, filter by style, and explore the brand — without sacrificing elegance on mobile or desktop.',
+    solution:
+      'Built a multi-page storefront with a hero landing, shop catalog with filter and sort controls, and about/contact pages. Added dark mode and a green-and-white aesthetic with serif headings throughout.',
+    outcome:
+      'Shipped a fully responsive live demo on GitHub Pages as the final project for INFO 6150: Web Application Development.',
+    link: 'https://aliangelinaaa.github.io/elegant-boutique/',
   },
   {
     id: 'polyglot-palace',
@@ -33,38 +73,6 @@ const featuredProjects = [
     outcome:
       'Shipped a deployed full-stack app on Netlify with structured documentation and a polished user experience.',
     link: 'https://polyglotpalace.netlify.app/',
-  },
-  {
-    id: 'gitpulse',
-    title: 'GitPulse',
-    date: 'August 2023',
-    tagline: 'GitHub productivity dashboard with 15 metrics',
-    role: 'Accessibility Engineer',
-    tech: ['React', 'GitHub API', 'UI/UX'],
-    image: gitpulse1,
-    problem:
-      'Development teams lack a single view to track GitHub productivity trends, open issues, and team health over time.',
-    solution:
-      'Partnered with the UI/UX lead to design an inclusive dashboard surfacing 15 key metrics, focusing on keyboard navigation, contrast, and clear data hierarchy.',
-    outcome:
-      'Built an accessible dashboard used to monitor productivity trends and open issues, improving visibility for project management.',
-    link: 'https://github.com/rahimaaa/SEMetrics.frontend',
-  },
-  {
-    id: 'club-finder',
-    title: 'Club Finder',
-    date: 'Spring 2023',
-    tagline: 'CUNY club discovery platform',
-    role: 'Project Manager & Lead Developer',
-    tech: ['HTML', 'CSS', 'JavaScript', 'UX Research'],
-    image: clubfinder,
-    problem:
-      'CUNY students struggled to discover clubs and organizations across campuses — information was scattered and hard to navigate.',
-    solution:
-      'Led a team of four through user research, project planning, and development of a searchable club directory tailored to the CUNY ecosystem.',
-    outcome:
-      'Delivered a polished team project for Human-Computer Interaction, practicing real project management and user-centered design.',
-    link: 'https://aliangelinaaa.github.io/ClubFinder/',
   },
 ];
 

@@ -55,15 +55,29 @@ function CaseStudyCard({ project, index }) {
           </div>
         </div>
 
-        {project.link && (
-          <a
-            href={project.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-outline mt-6 text-sm self-start"
-          >
-            View Project
-          </a>
+        {(project.link || project.secondaryLink) && (
+          <div className="flex flex-wrap gap-3 mt-6">
+            {project.link && (
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-outline text-sm"
+              >
+                {project.linkLabel || 'View Project'}
+              </a>
+            )}
+            {project.secondaryLink && (
+              <a
+                href={project.secondaryLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-outline text-sm"
+              >
+                {project.secondaryLinkLabel || 'Learn More'}
+              </a>
+            )}
+          </div>
         )}
       </div>
     </motion.article>
@@ -78,7 +92,7 @@ function FeaturedProjects() {
           <p className="section-subheading">Selected Work</p>
           <h2 className="section-heading">Featured Projects</h2>
           <p className="mt-4 text-body max-w-2xl mx-auto">
-            A closer look at the projects I'm most proud of — from NYT internships to full-stack builds.
+            A closer look at the projects I'm most proud of — from UI/UX case studies to full-stack builds.
           </p>
         </div>
 

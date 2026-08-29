@@ -14,6 +14,41 @@ const fadeUp = (delay = 0) => ({
   transition: { duration: 0.7, delay, ease: [0.22, 1, 0.36, 1] },
 });
 
+const GREETING_PREFIX = "Hi, I'm ";
+const GREETING_NAME = 'Nafisa';
+const GREETING_FULL = GREETING_PREFIX + GREETING_NAME;
+
+function useTyping(text, { speed = 75, startDelay = 0, active = true } = {}) {
+  const [displayed, setDisplayed] = useState('');
+  const [done, setDone] = useState(false);
+
+  useEffect(() => {
+    if (!active) return;
+
+    let index = 0;
+    let typeTimeout;
+    const startTimeout = setTimeout(() => {
+      const typeNext = () => {
+        index += 1;
+        setDisplayed(text.slice(0, index));
+        if (index < text.length) {
+          typeTimeout = setTimeout(typeNext, speed);
+        } else {
+          setDone(true);
+        }
+      };
+      typeNext();
+    }, startDelay);
+
+    return () => {
+      clearTimeout(startTimeout);
+      clearTimeout(typeTimeout);
+    };
+  }, [text, speed, startDelay, active]);
+
+  return { displayed, done };
+}
+
 function Home() {
   const [loading, setLoading] = useState(true);
 
@@ -21,6 +56,12 @@ function Home() {
     const timer = setTimeout(() => setLoading(false), 2000);
     return () => clearTimeout(timer);
   }, []);
+
+  const { displayed: greeting, done: greetingDone } = useTyping(GREETING_FULL, {
+    speed: 75,
+    startDelay: 400,
+    active: !loading,
+  });
 
   const d = (base) => loading ? base : 0;
 
@@ -34,9 +75,21 @@ function Home() {
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           <motion.div {...fadeUp(d(0.2))}>
             <p className="section-subheading">Service Recovery Analyst @ Healthfirst</p>
-            <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl text-stone-900 dark:text-stone-50 leading-[1.1] mb-6">
-              Hi, I'm{' '}
-              <span className="italic text-rose-600 dark:text-rose-300">Nafisa</span>
+            <h1
+              className="font-serif text-5xl sm:text-6xl lg:text-7xl text-stone-900 dark:text-stone-50 leading-[1.1] mb-6 min-h-[1.1em]"
+              aria-label={GREETING_FULL}
+            >
+              {greeting.length <= GREETING_PREFIX.length ? (
+                greeting
+              ) : (
+                <>
+                  {GREETING_PREFIX}
+                  <span className="italic text-rose-600 dark:text-rose-300">
+                    {greeting.slice(GREETING_PREFIX.length)}
+                  </span>
+                </>
+              )}
+              {!greetingDone && <span className="typing-cursor" aria-hidden="true" />}
             </h1>
             <p className="text-lg text-body leading-relaxed mb-4 max-w-lg">
               A passionate developer eager to make a meaningful impact — whether through
@@ -45,8 +98,9 @@ function Home() {
               <span className="font-semibold text-rose-600 dark:text-rose-300"> helping others with genuine passion</span>.
             </p>
             <p className="text-body leading-relaxed mb-8 max-w-lg">
-              I graduated Brooklyn College in three years, previously co-founded WIT Unite to empower CUNY students
-              (2023–2025), and interned at The New York Times before joining Healthfirst in service recovery and
+              I earned my MSIS from Northeastern University (Jan 2025–Apr 2026) and graduated Brooklyn College in
+              three years with a BS in Computer Science. I previously co-founded WIT Unite to empower CUNY students
+              (2023–2025), interned at The New York Times, and now work at Healthfirst in service recovery and
               incident management.
             </p>
             <div className="flex flex-wrap gap-3">

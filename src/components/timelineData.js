@@ -22,6 +22,8 @@ import rockPaperScissors from "../images/rockpapersscissors.png";
 import cuteCart from "../images/cute-cart.png";
 import studySyncHifi from "../images/studysync-hifi.png";
 import studySyncWireframes from "../images/studysync-wireframes.png";
+import homyfyHome from "../images/homyfy-home.png";
+import homyfySignup from "../images/homyfy-signup.png";
 
 const CASE_STUDY_URL = `${import.meta.env.BASE_URL}Final%20Presenation.pptx`;
 
@@ -298,6 +300,35 @@ const timelineData = [
             </div>
         `,
         "link": "https://aliangelinaaa.github.io/cute-cart/"
+    },
+    {
+        "title": "Homyfy",
+        "date": "Spring 2025",
+        "categories": ["ui-ux", "mobile"],
+        "linkLabel": "View Prototype",
+        "description": `
+            <p class="mb-4 text-base text-gray-700 leading-relaxed">
+                <span class="font-semibold">Homyfy</span> is a mobile home-decor shopping app prototype built with Team 7 for
+                <span class="font-semibold">INFO 7245: Agile Software Development</span>. The app helps users discover furniture
+                and interior pieces through a curated, luxury-forward browsing experience.
+            </p>
+            <p class="mb-4 text-base text-gray-700 leading-relaxed">
+                Core flows include account creation, a searchable home feed with quick links to favorites, history, following,
+                and orders, plus category browsing for tables, chairs, couches, and ottomans. The visual system uses warm beige
+                tones, serif headings, and clean product cards to match a modern home-decor brand.
+            </p>
+            <p class="mb-4 text-base text-gray-700 leading-relaxed">
+                As a team project, we practiced agile delivery — from requirements and iteration to a clickable high-fidelity
+                Figma prototype ready for user testing.
+            </p>
+
+            <h3 class="text-xl font-bold mb-2">Media</h3>
+            <div class="grid grid-cols-1 gap-4 mb-4">
+                <img src=${homyfyHome} alt="Homyfy home screen with trending furniture categories" class="w-full max-w-2xl mx-auto rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300" />
+                <img src=${homyfySignup} alt="Homyfy create account sign-up screen" class="w-full max-w-2xl mx-auto rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300" />
+            </div>
+        `,
+        "link": "https://www.figma.com/proto/XA1tBrmf8EmtiYPJoJsNhe/INFO-7245---Team-7?node-id=1-2428"
     },
     {
         "title": "Rock Paper Scissors",
