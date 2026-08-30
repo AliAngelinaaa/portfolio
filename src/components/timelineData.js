@@ -1,5 +1,6 @@
 import bugsplat1 from '../images/bugsplat1.png';
 import bugsplat1momma from '../images/bugsplat1momma.png';
+import pvpbefore from '../images/1v1before.png';
 import pvpafter from '../images/1v1after.png';
 import clubfinder from '../images/clubfinder.png';
 import clubfinder1 from '../images/clubfinder1.png';
@@ -46,7 +47,7 @@ const timelineData = [
             
             <h3 class="text-xl font-bold mb-2">Media</h3>
             <p class="mb-2">Below are some before and after screenshots of the game:</p>
-            <img src=${bugsplat1} alt="Before Image" class="w-full mb-2 rounded-lg shadow-md" />
+            <img src=${pvpbefore} alt="Before Image" class="w-full mb-2 rounded-lg shadow-md" />
 
             <p class="mb-2">Here is how it looks now:</p>
             <img src=${pvpafter} alt="After Image" class="w-full rounded-lg shadow-md" />
@@ -64,22 +65,13 @@ const timelineData = [
             <p class="mb-4">Your home is under siege by dangerous alien bugs. Negotiations have failed, so you have no choice but to splat them. Click on 15 bugs to eliminate them, but beware—these bugs won't go down without a fight, making comments to try and dissuade you. The game features two modes: regular and "more annoying" mode for an extra challenge.</p>
     
             <h3 class="text-xl font-bold mb-2">Media</h3>
-            <p class="mb-2">Below are some before and after screenshots of the game:</p>
+            <p class="mb-2">Below are some screenshots of the game:</p>
             <div class="grid grid-cols-2 gap-4 mb-4">
                 <img src=${bugsplat1} alt="Before Image 1" class="w-full rounded-lg shadow-md" />
                 <img src=${bugsplat1momma} alt="Before Image 2" class="w-full rounded-lg shadow-md" />
             </div>
-
-            <p class="mb-2">Here is how it looks now:</p>
-            <div class="grid grid-cols-2 gap-4 mb-4">
-                <img src=${bugsplat1} alt="After Image 1" class="w-full rounded-lg shadow-md" />
-                <img src=${bugsplat1momma} alt="After Image 2" class="w-full rounded-lg shadow-md" />
-            </div>
-    
-            <h3 class="text-xl font-bold mb-2">Links</h3>
-            <p class="mb-2">View the demo <a href="https://example.com/demo" target="_blank" class="text-blue-600 hover:text-blue-800 underline">here</a>.</p>
-            <p>Access the repository <a href="https://github.com/example/bugsplat" target="_blank" class="text-blue-600 hover:text-blue-800 underline">here</a>.</p>
-        `
+        `,
+        "link": "https://aliangelinaaa.github.io/Bug-Splat/"
     },
     {
         "title": "Study Timer",
