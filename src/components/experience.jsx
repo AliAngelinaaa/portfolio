@@ -20,14 +20,8 @@ function Experience() {
 
   useEffect(() => {
     const sequence = keySequence.join('');
-    if (sequence === 'hello') {
-      setEasterEggType('greeting');
-      setEasterEgg(true);
-    } else if (sequence === 'dance') {
+    if (sequence === 'dance') {
       setEasterEggType('party');
-      setEasterEgg(true);
-    } else if (sequence === 'witu') {
-      setEasterEggType('witu');
       setEasterEgg(true);
     }
 
@@ -48,22 +42,16 @@ function Experience() {
   }, [easterEggType]);
 
   const getEasterEggContent = () => {
-    switch (easterEggType) {
-      case 'greeting':
-        return "🎉 You found an Easter egg! Thanks for exploring my journey! 🎉";
-      case 'party':
-        return (
-          <div className="flex items-center justify-center text-2xl font-bold">
-            <span className="animate-bounce mx-2">🕺</span>
-            <span className="animate-color-change">Let's dance! You've unlocked the party mode!</span>
-            <span className="animate-bounce mx-2">💃</span>
-          </div>
-        );
-      case 'witu':
-        return "🌟 You discovered the WITU Easter egg! If you're eligible, join WITU! 🌟";
-      default:
-        return "";
+    if (easterEggType === 'party') {
+      return (
+        <div className="flex items-center justify-center text-2xl font-bold">
+          <span className="animate-bounce mx-2">🕺</span>
+          <span className="animate-color-change">Let's dance! You've unlocked the party mode!</span>
+          <span className="animate-bounce mx-2">💃</span>
+        </div>
+      );
     }
+    return '';
   };
 
   return (

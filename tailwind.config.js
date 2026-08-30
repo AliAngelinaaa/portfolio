@@ -56,6 +56,8 @@ module.exports = {
           600: 'var(--color-rose-600, #e11d48)',
           700: 'var(--color-rose-700, #be123c)',
           800: 'var(--color-rose-800, #9f1239)',
+          900: 'var(--color-rose-900, #881337)',
+          950: 'var(--color-rose-950, #4c0519)',
         },
       },
       backgroundImage: {
@@ -63,9 +65,9 @@ module.exports = {
         'mesh': 'var(--mesh-gradient)',
       },
       boxShadow: {
-        'soft': '0 4px 24px -4px rgba(225, 29, 72, 0.08)',
-        'card': '0 8px 32px -8px rgba(0, 0, 0, 0.08)',
-        'card-hover': '0 16px 48px -12px rgba(225, 29, 72, 0.15)',
+        'soft': 'var(--shadow-soft, 0 4px 24px -4px rgba(225, 29, 72, 0.08))',
+        'card': 'var(--shadow-card, 0 8px 32px -8px rgba(0, 0, 0, 0.08))',
+        'card-hover': 'var(--shadow-card-hover, 0 16px 48px -12px rgba(225, 29, 72, 0.15))',
       },
     },
   },
@@ -91,6 +93,18 @@ module.exports = {
         },
         '[data-theme="dark"] .glass-nav': {
           'background': 'rgba(12, 10, 9, 0.92)',
+        },
+        '[data-theme="purple"] .glass': {
+          'background': 'rgba(255, 255, 255, 0.82)',
+        },
+        '[data-theme="purple"] .glass-nav': {
+          'background': 'rgba(245, 240, 255, 0.92)',
+        },
+        '[data-theme="purple-dark"] .glass': {
+          'background': 'rgba(26, 16, 40, 0.92)',
+        },
+        '[data-theme="purple-dark"] .glass-nav': {
+          'background': 'rgba(15, 10, 26, 0.94)',
         },
       });
     },

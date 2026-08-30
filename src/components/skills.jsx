@@ -44,7 +44,6 @@ function Skills() {
   const [currentRizz, setCurrentRizz] = useState('');
   const [showEasterEgg, setShowEasterEgg] = useState(false);
   const titleRef = useRef(null);
-  const [showMobileEasterEgg, setShowMobileEasterEgg] = useState(false);
 
   const javaRizzLines = [
     "Hey girl, are you a Java exception? Because you've caught my attention.",
@@ -84,20 +83,6 @@ function Skills() {
     };
     document.addEventListener('selectionchange', handleSelection);
     return () => document.removeEventListener('selectionchange', handleSelection);
-  }, []);
-
-  useEffect(() => {
-    let lastTap = 0;
-    const handleDoubleTap = () => {
-      const now = Date.now();
-      if (now - lastTap < 300) {
-        setShowMobileEasterEgg(true);
-        setTimeout(() => setShowMobileEasterEgg(false), 3000);
-      }
-      lastTap = now;
-    };
-    document.addEventListener('touchend', handleDoubleTap);
-    return () => document.removeEventListener('touchend', handleDoubleTap);
   }, []);
 
   const emojis = ['🚀', '💻', '🔧', '🎨', '📊', '🧠', '🌟', '🔥'];
@@ -185,16 +170,6 @@ function Skills() {
         {showEasterEgg && (
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 pointer-events-none z-50">
             {emojis.map((emoji, index) => <ConfettiEmoji key={index} emoji={emoji} />)}
-          </motion.div>
-        )}
-        {showMobileEasterEgg && (
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 50 }}
-            className="fixed bottom-4 left-1/2 -translate-x-1/2 bg-purple-600 text-white px-6 py-3 rounded-2xl shadow-card max-w-sm z-50"
-          >
-            <p className="text-sm font-medium">🎉 Mobile Easter Egg Found! 📱</p>
           </motion.div>
         )}
       </AnimatePresence>

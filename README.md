@@ -79,7 +79,7 @@ public/
 - Click "Home" in the nav 5 times → cat appears
 - Type `purple` → purple theme
 - Click Java icon 3 times in Skills → Java rizz lines
-- On Experience page, type `hello`, `dance`, or `witu`
+- On Experience page, type `dance`
 
 ## Contact
 

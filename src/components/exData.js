@@ -2,10 +2,13 @@ const exData = [
     {
         "Title": "I&O Service Recovery Analyst",
         "Company": "Healthfirst",
-        "Date": "Sep 2024 - Present · 1 mo",
+        "Date": "Sep 2024 - Present · 2 yrs",
         "Description": [
-            "Selected for an exclusive cohort of 29 professionals in a fast-paced early career development program, designed to accelerate growth in the service recovery and incident management domain",
-            "Shadowing P1 and P2 incidents to support effective recovery processes, learning from the Incident Management Process and assisting in timely resolutions."
+          "Acted as both IT Communications and Incident Manager for P1/P2 incidents, coordinating incident response and providing timely business updates while also supporting company-wide knowledge management on ServiceNow, helping restructure documentation processes to improve accuracy and findability.",
+          "Identified and addressed inconsistencies in ServiceNow incident forms, collaborating with the Service Management team to implement improvements that enhanced operational efficiency and customer experience.",
+          "Designed and built a full-featured React dashboard with automated ticket/incident categorization, evolving an earlier Streamlit prototype into a far more capable internal tool that gives non-technical stakeholders self-serve visibility into trends without engineering support.",
+          "Contributed to a cross-functional spike project building a data observability dashboard, normalizing outputs from AWS Athena, Glue jobs, and SQL Server into a unified SQLite backend to surface in-depth product health and usage metrics; contributed to wireframing and led deployment using AWS Lambda and EventBridge.",
+          "Automated recurring communication workflows using Power Automate, including a weekly on-call notification that replaced a 15+ minute manual process split across three emails with one automated send to 1,000+ recipients, plus mass user-notification campaigns with automatic manager CC'ing."
         ],
         "Image": "https://healthfirst.org/svg/logos/hf-logo.svg"
     },

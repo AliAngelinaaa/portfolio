@@ -31,10 +31,7 @@ function CaseStudyCard({ project, index }) {
 
         <div className="flex flex-wrap gap-2 mb-5">
           {project.tech.map(tag => (
-            <span
-              key={tag}
-              className="px-2.5 py-1 text-xs font-medium rounded-full bg-rose-50 dark:bg-rose-950/60 text-rose-700 dark:text-rose-200 border border-rose-100 dark:border-rose-800"
-            >
+            <span key={tag} className="tech-pill">
               {tag}
             </span>
           ))}
